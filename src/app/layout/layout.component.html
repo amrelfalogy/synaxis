@@ -1,9 +1,16 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-blue fixed-top">
+  <nav
+    class="navbar navbar-expand-lg navbar-blue fixed-top"
+    [ngClass]="{
+      'navbar-light': !isAtTop || (!isHomePage && isAtTop),
+      'navbar-hidden': !isNavbarVisible,
+      'navbar-transparent': isAtTop && isHomePage
+    }"
+  >
     <div class="container">
       <div class="logo" style="width: 20%">
         <a class="navbar-brand" routerLink="">
-          <img src="assets/imgs/6-0.png" alt="Kawkaba" />
+          <img src="assets/imgs/6-0.png" alt="synaxis" />
         </a>
       </div>
       <button
@@ -17,95 +24,227 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div
+        class="collapse navbar-collapse"
+        id="navbarNav"
+        style="justify-content: center"
+      >
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" routerLink="home" routerLinkActive="active"
-              >Home</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="about-us" routerLinkActive="active"
-              >About Us</a
+            <a
+              class="nav-link"
+              routerLink="home"
+              [routerLinkActive]="['active']"
+              >HOME</a
             >
           </li>
           <li class="nav-item dropdown">
+            <a class="nav-link" class="nav-link" routerLink="coming-soon"
+              >about</a
+            >
+          </li>
+
+          <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
+              id="servicesDropdown"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              services
+              SERVICES
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li>
+                <a
+                  class="dropdown-item"
+                  routerLink="coming-soon"
+                  (click)="setActiveLink('coming-soon')"
+                  >Real Estate Investment and Development</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  routerLink="coming-soon"
+                  (click)="setActiveLink('coming-soon')"
+                  >Exhibitions</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  routerLink="coming-soon"
+                  (click)="setActiveLink('coming-soon')"
+                  >events</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  routerLink="coming-soon"
+                  (click)="setActiveLink('coming-soon')"
+                  >constructions</a
+                >
+              </li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="projects" routerLinkActive="active"
-              >Projects</a
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              id="projectsDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
             >
+              projects
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+              <li>
+                <a
+                  class="dropdown-item"
+                  routerLink="coming-soon"
+                  (click)="setActiveLink('coming-soon')"
+                  >Synaxis city intertainment</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  routerLink="coming-soon"
+                  (click)="setActiveLink('coming-soon')"
+                  >synaxis events</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  routerLink="coming-soon"
+                  (click)="setActiveLink('coming-soon')"
+                  >Synaxis Durable Goods Exhibition</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="coming-soon">gallary </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="contact" routerLinkActive="active"
-              >Contact</a
-            >
+            <a class="nav-link" routerLink="coming-soon">CONTACT </a>
           </li>
         </ul>
-        <div class="navbar-icons d-flex align-items-center">
-          <!-- Icons or other elements can go here -->
+      </div>
+      <div
+        class="collapse navbar-collapse"
+        id="nav-icons"
+        style="justify-content: end"
+      >
+        <div
+          style="
+            display: inline-block;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+          "
+        >
+          <span class="material-symbols-outlined" style="color: white">
+            shopping_bag
+          </span>
         </div>
+        <app-cart
+          *ngIf="cartComponent.isVisible"
+          class="cart-container"
+        ></app-cart>
+        <div
+          style="
+            display: inline-block;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+          "
+        >
+          <span
+            class="material-symbols-outlined"
+            style="color: white; display: contents"
+          >
+            account_circle
+          </span>
+        </div>
+
+        <!-- <button class="btn mb-auto" routerLink="../login">Login</button> -->
       </div>
     </div>
   </nav>
 </header>
-
 <router-outlet></router-outlet>
 
 <footer>
   <div class="container">
-    <div class="title">
-      <span>Contact Us</span>
-      <h1>Let's Work Together</h1>
-    </div>
     <div class="row">
-      <div class="col-md-9 footer-content">
+      <!-- Get in Touch Column -->
+      <div class="col-sm-3">
         <h3 class="footer-title">Get in Touch</h3>
-        <p><span>Phone:</span> 01016852128</p>
-        <p><span>Follow Us</span> for updates:</p>
         <div class="footer-links">
-          <div
-            style="display: inline-block; padding: 0 10px 0 0; font-size: 22px"
-          >
+          <div class="contact-item">
+            <span class="material-symbols-outlined">mail</span>
+            <a href="mailto:synaxisinformation@gmail.com"
+              >synaxisinformation&#64;gmail.com</a
+            >
+          </div>
+          <div class="contact-item">
+            <span class="material-symbols-outlined">call</span>
+            <span style="font-size: 16px">01016852128</span>
+          </div>
+          <div class="social-media">
+            <a href="https://wa.me/01016852128">
+              <fa-icon [icon]="faWhatsapp" style="color: white"></fa-icon>
+            </a>
             <a
               href="https://instagram.com/kawkabafragrances?utm_medium=copy_link"
             >
-              <fa-icon [icon]="faInstagram" style="color: #c49e39"></fa-icon>
-            </a>
-          </div>
-          <div style="display: inline-block; font-size: 22px">
-            <a href="https://t.me/kawkabafragrances">
-              <fa-icon [icon]="faWhatsapp" style="color: #c49e39"></fa-icon>
+              <fa-icon
+                [icon]="faInstagram"
+                class="fa-regular"
+                style="color: white"
+              ></fa-icon>
             </a>
           </div>
         </div>
       </div>
-      <div class="col-md-3 footer-img">
-        <img
-          src="assets/imgs/6-0.png"
-          style="max-width: 100%"
-          alt="Footer Image"
-        />
+
+      <!-- Information Column -->
+      <div class="col-sm-3">
+        <h3 class="footer-title">Information</h3>
+        <ul class="footer-links">
+          <li><a routerLink="coming-soon">About Us</a></li>
+          <li><a routerLink="coming-soon">Our Services</a></li>
+          <li><a routerLink="coming-soon">Contact Info</a></li>
+        </ul>
+      </div>
+
+      <!-- Support Column -->
+      <div class="col-sm-3">
+        <h3 class="footer-title">Support</h3>
+        <ul class="footer-links">
+          <li><a routerLink="coming-soon">FAQ</a></li>
+          <li><a routerLink="coming-soon">Help Center</a></li>
+          <li><a routerLink="coming-soon">Customer Service</a></li>
+        </ul>
+      </div>
+
+      <!-- Policies Column -->
+      <div class="col-sm-3">
+        <h3 class="footer-title">Policies</h3>
+        <ul class="footer-links">
+          <li><a routerLink="coming-soon">Privacy Policy</a></li>
+          <li><a routerLink="coming-soon">Terms & Conditions</a></li>
+          <li><a routerLink="coming-soon">Return Policy</a></li>
+        </ul>
       </div>
     </div>
   </div>
   <div class="sub-footer text-center">
-    © Copyright {{ currentYear }} Kawkaba. All rights reserved.
+    © Copyright {{ currentYear }} Synaxis. All rights reserved.
   </div>
 </footer>

@@ -8,6 +8,17 @@
 } */
 
 /* Navbar Styling */
+.navbar-content.hidden {
+  display: none;
+}
+
+.navbar-hidden {
+  display: none;
+}
+.fixed-top {
+  z-index: 999;
+}
+
 .navbar {
   transition: background-color 0.3s;
   z-index: 999;
@@ -22,10 +33,10 @@
   cursor: pointer;
 }
 .nav-link:hover {
-  color: #d7b304;
+  color: #fec531;
 }
 .navbar-nav .active {
-  color: #d7b304;
+  color: #fec531;
   text-decoration: underline;
   font-weight: 600;
 }
@@ -36,35 +47,125 @@
 #navbarNav {
   justify-content: flex-end;
 }
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler {
+  width: auto;
+  border: none;
+}
+.navbar-transparent {
+  background-color: transparent;
+}
+
+.dropdown-menu {
+  background-color: #001f3f;
+}
+
+.dropdown-item {
+  color: #dedede;
+  text-transform: capitalize;
+}
+
+.dropdown-item:hover {
+  color: #fec531;
+  background-color: transparent;
+}
+
+.nav-link.active,
+.dropdown-item.active {
+  color: #fec531;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.material-symbols-outlined {
+  font-weight: 200;
+  font-size: 24px;
+}
 
 /* Footer Styling */
 footer {
   background-color: #001f3f;
   color: #fff;
   padding-top: 80px;
+  position: relative;
 }
+
 .footer-title {
-  color: #c49e39;
+  font-size: 18px;
+  margin-bottom: 15px;
   font-weight: bold;
-  text-transform: uppercase;
+  color: #bdbdbd; /* Ensures consistency */
 }
-.footer-content p span {
-  font-weight: bold;
-  color: #fff;
-}
+
 .footer-links {
-  font-size: 22px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #bdbdbd;
 }
-.footer-links a {
-  color: #c49e39;
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-item span {
+  font-size: 20px;
+}
+
+.contact-item a {
+  color: #bdbdbd; /* Changes link color */
   text-decoration: none;
+  transition: color 0.2s;
 }
+
+.contact-item a:hover {
+  color: #ccc;
+}
+
+.social-media {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.social-media a {
+  font-size: 22px;
+  color: #bdbdbd;
+}
+
+ul.footer-links {
+  list-style: none; /* Removes bullets */
+  padding: 0;
+  margin: 0; /* Removes any default margin */
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links li a {
+  color: #bdbdbd;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links li a:hover {
+  color: #ccc;
+}
+
 .sub-footer {
   padding: 20px 0;
   margin-top: 40px;
-  border-top: 1px solid #dedede;
-  color: #dedede;
+  border-top: 1px solid #bdbdbd;
+  color: #bdbdbd;
 }
+
 @media (max-width: 768px) {
   .footer-content {
     text-align: center;

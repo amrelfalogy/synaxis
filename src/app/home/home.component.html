@@ -1,22 +1,54 @@
-<div class="header">
+<div class="header" style="background-image: url('assets/imgs/skyscraper.jpg')">
+  <div class="overlay"></div>
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
-        <div class="content">
-          <h3>Hello this is my subtitle</h3>
-          <h1>Here is our title if you interested</h1>
-          <p>
-            Hello this is our content about our company, if you need anything
-          </p>
+      <div class="col-sm-12 header-content">
+        <div class="header-title">
+          <h1 class="cinzel-decorative">
+            <span
+              *ngFor="
+                let letter of 'We &nbsp; Offer &nbsp; Luxury&nbsp; Life'.split(
+                  ''
+                );
+                let i = index
+              "
+              [style.animationDelay]="i * 0.1 + 's'"
+            >
+              {{ letter }}
+            </span>
+          </h1>
         </div>
-        <button class="mybtn">consult now</button>
-      </div>
-      <div class="col-md-6">
-        <img src="assets/imgs/iStock-1852272481-removebg-preview.png" alt="" />
+        <div class="row">
+          <div class="col-md-9" style="display: flex">
+            <button class="mybtn" style="z-index: 3 !important">
+              Consult now
+            </button>
+          </div>
+          <div class="notice col-md-3">
+            <h3>We are <span>synaxis investments</span></h3>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Message -->
+
+<section class="message section">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="content container">
+        <h1>synaxis investment</h1>
+        <p>
+          We are committed not only to providing high-quality products and
+          services, but also to going above and beyond to ensure complete
+          customer satisfaction.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ************  services section  ********  -->
 <div class="services-section">
@@ -36,7 +68,7 @@
     <div class="row cards-container">
       <div class="col-sm-4">
         <div class="card">
-          <img src="assets/imgs/s2.jpg" alt="serviceImg" />
+          <img src="assets/imgs/ser1.jpeg" alt="serviceImg" />
           <div class="overlay"></div>
           <div class="card-content">
             <h2>Card Heading</h2>
@@ -62,7 +94,7 @@
       </div>
       <div class="col-sm-4">
         <div class="card">
-          <img src="assets/imgs/s3.jpg" alt="serviceImg" />
+          <img src="assets/imgs/ser3.jpeg" alt="serviceImg" />
           <div class="overlay"></div>
           <div class="card-content">
             <h2>Card Heading</h2>
@@ -74,136 +106,12 @@
         </div>
       </div>
     </div>
-    <div class="btn">
-      <button class="mybtn">view all services</button>
-    </div>
-  </div>
-</div>
-
-<!-- parallax -->
-<div class="row">
-  <div class="col-md-12">
-    <section
-      class="parallax img-fluid"
-      style="background-image: url('assets/imgs/parallax.jpg')"
-    >
-      <div class="overlay"></div>
-      <div class="row">
-        <div class="col-md-7"></div>
-        <div class="col-md-5">
-          <div class="content container">
-            <h3>scan & smell</h3>
-            <h1>
-              try befor buy! <br />
-              discover new experience with iperfume machine
-            </h1>
-            <div class="btn">
-              <button class="mybtn">discover now</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-</div>
-
-<!-- projects section -->
-<div class="projects-section">
-  <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <div class="title mb-30">
-          <span>our projects</span>
-          <h1>explore our diverse range of projects</h1>
-          <p style="padding: 6px 20%">
-            We specialize in a wide range of construction services, including
-            residential, commercial, and industrial projects.
-          </p>
+      <div class="col" style="display: flex; justify-content: center">
+        <div class="btn">
+          <button class="mybtn">view all services</button>
         </div>
       </div>
-    </div>
-    <div class="row cards-container">
-      <div class="col-sm-4">
-        <div class="card">
-          <img src="assets/imgs/s2.jpg" alt="serviceImg" />
-          <div class="overlay"></div>
-          <div class="card-content">
-            <h2>Card Heading</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-              exercitationem iste, voluptatum, quia explicabo laboriosam rem
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="card">
-          <img src="assets/imgs/s4.jpg" alt="serviceImg" />
-          <div class="overlay"></div>
-          <div class="card-content">
-            <h2>Card Heading</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-              exercitationem iste, voluptatum, quia explicabo laboriosam rem
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="card">
-          <img src="assets/imgs/s3.jpg" alt="serviceImg" />
-          <div class="overlay"></div>
-          <div class="card-content">
-            <h2>Card Heading</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-              exercitationem iste, voluptatum, quia explicabo laboriosam rem
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="card">
-          <img src="assets/imgs/s3.jpg" alt="serviceImg" />
-          <div class="overlay"></div>
-          <div class="card-content">
-            <h2>Card Heading</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-              exercitationem iste, voluptatum, quia explicabo laboriosam rem
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="card">
-          <img src="assets/imgs/s3.jpg" alt="serviceImg" />
-          <div class="overlay"></div>
-          <div class="card-content">
-            <h2>Card Heading</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-              exercitationem iste, voluptatum, quia explicabo laboriosam rem
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="card">
-          <img src="assets/imgs/s3.jpg" alt="serviceImg" />
-          <div class="overlay"></div>
-          <div class="card-content">
-            <h2>Card Heading</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-              exercitationem iste, voluptatum, quia explicabo laboriosam rem
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="btn">
-      <button class="mybtn">view all projects</button>
     </div>
   </div>
 </div>
