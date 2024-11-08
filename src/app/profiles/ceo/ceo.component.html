@@ -1,0 +1,250 @@
+<!-- Hero Section -->
+<div class="row">
+  <div class="col-md-12">
+    <section
+      class="header img-fluid"
+      style="background-image: url('assets/imgs/h2.jpg')"
+    >
+      <div class="overlay"></div>
+      <div class="header-content">
+        <h1>Meet Our Team</h1>
+        <h3>
+          <a routerLink="/home" style="color: inherit; text-decoration: none"
+            >Home</a
+          >
+          - <span>Our Team</span>
+        </h3>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="profile-page">
+  <div class="container d-flex">
+    <!-- Sidebar for author info and navigation links -->
+    <div class="sidenav col-md-3 d-flex flex-column align-items-center">
+      <!-- Author Image and Info -->
+      <div class="author-info">
+        <img src="assets/imgs/CEO.jpeg" alt="Author" class="author-img" />
+        <h4 class="author-name">mohamed kamal</h4>
+        <p class="author-position">CEO</p>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="profiles/ceo#about">About</a></li>
+        <li><a href="profiles/ceo#skills">Skills</a></li>
+        <li><a href="profiles/ceo#experience">Experience</a></li>
+        <li><a href="profiles/ceo#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Main content sections -->
+    <div class="content-sections col-md-9">
+      <section id="about" class="content-section">
+        <div class="title">
+          <span>About me</span>
+          <h1>who am i ?</h1>
+        </div>
+        <div class="about-desc">
+          <strong>Hi, I'm Mohamed </strong> and i'm the Owner and Chairman of
+          the Board of Directors. <br />
+          My extensive experience spans securities and commodities trading,
+          portfolio management, and real estate investment in the UAE, Saudi
+          Arabia, and beyond. Driven by a vision to bring world-class business
+          practices to Egypt, I'm dedicated to establishing Synaxis as a
+          cornerstone of Egypt's economic growth. I aim to leverage my
+          international experience to foster partnerships in both the government
+          and private sectors, contributing to Egypt's position as a leading
+          global business hub.
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="note">
+              <h2>
+                Proudly leading investments <br />
+                over 6 billion AED in real estate and construction!
+              </h2>
+              <a href="profiles/ceo#contact">
+                <button class="mybtn">consult now</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- skills -->
+      <section class="skills-section" id="skills" data-section="skills">
+        <div class="container">
+          <div class="row">
+            <div class="title">
+              <span class="heading-meta">What i do </span>
+              <h1 class="heading">here are some of my skills</h1>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-md-4 text-center" *ngFor="let skill of skills">
+              <div class="skill-card p-4" [ngClass]="skill.color">
+                <div class="icon-container" [ngClass]="skill.color">
+                  <!-- <i [class]="skill.icon"></i> -->
+                  <i class="fa-solid fa-link" style="font-size: 18px"></i>
+                </div>
+                <div class="desc">
+                  <h3>{{ skill.name }}</h3>
+                  <p>{{ skill.desc }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Experience -->
+      <section class="experience-section" id="experience">
+        <div class="container">
+          <div class="row">
+            <div class="title">
+              <span class="heading-meta">my speciality</span>
+              <h1 class="heading">Work Experience</h1>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-centered">
+          <article class="timeline-entry">
+            <div class="timeline-entry-inner">
+              <div class="timeline-icon color-1">
+                <i class="fa-solid fa-pen"></i>
+              </div>
+              <div class="timeline-label">
+                <h2>
+                  Owner & Chairman of the Board of Directors, Synaxis
+                  <span> Present</span>
+                </h2>
+                <p>
+                  Leading Synaxis in Egypt, focusing on both public and private
+                  sector partnerships to drive economic growth and position
+                  Egypt as a global business leader.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-entry">
+            <div class="timeline-entry-inner">
+              <div class="timeline-icon color-2">
+                <i class="fa-solid fa-pen"></i>
+              </div>
+              <div class="timeline-label">
+                <h2>
+                  Founder & Partner, Scrobless Real Estate Investment and
+                  General Contracting LLC, UAE
+                  <span>2011 - Present</span>
+                </h2>
+                <p>
+                  Established and managed real estate investment and contracting
+                  firm in Abu Dhabi and Dubai, handling transactions, property
+                  maintenance, and later expanding into construction.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-entry">
+            <div class="timeline-entry-inner">
+              <div class="timeline-icon color-3">
+                <i class="fa-solid fa-pen"></i>
+              </div>
+              <div class="timeline-label">
+                <h2>
+                  Senior Portfolio Manager, UAE
+                  <span>2003 - 2011</span>
+                </h2>
+                <p>
+                  Managed extensive client portfolios, trading securities and
+                  commodities on the Abu Dhabi and Dubai Stock Exchanges,
+                  overseeing investments valued at over AED 6 billion.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-entry">
+            <div class="timeline-entry-inner">
+              <div class="timeline-icon color-4">
+                <i class="fa-solid fa-pen"></i>
+              </div>
+              <div class="timeline-label">
+                <h2>
+                  Contributions to Real Estate Projects in Saudi Arabia,
+                  Georgia, and Turkey
+                </h2>
+                <p>
+                  Played a pivotal role in real estate development projects,
+                  contributing expertise to projects in Riyadh, Saudi Arabia,
+                  and further expansions in Georgia and Turkey.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-entry begin">
+            <div class="timeline-entry-inner">
+              <div class="timeline-icon color-none"></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="content-section">
+        <div class="container">
+          <div class="row">
+            <div class="title">
+              <span class="heading-meta">get in touch</span>
+              <h1 class="heading">contact me</h1>
+            </div>
+          </div>
+        </div>
+        <div class="contact-section">
+          <div class="row contact-details">
+            <div class="col-md-5 contact-icons">
+              <div class="contact-desc">
+                <div class="icon-container">
+                  <span class="material-symbols-outlined"> phone </span>
+                </div>
+                <div class="contact-text">
+                  <a href="https://wa.me/01016852128"> +965 509 121</a>
+                </div>
+              </div>
+              <div class="contact-desc">
+                <div class="icon-container">
+                  <span class="material-symbols-outlined"> email </span>
+                </div>
+                <div class="contact-text">
+                  <a href="mailto:synaxiscompany@gmail.com"
+                    >mohamedkamal&#64;gmail.com</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 contact-icons">
+              <div class="contact-desc">
+                <div class="icon-container">
+                  <fa-icon [icon]="faWhatsapp" class="whatsapp-icon"></fa-icon>
+                </div>
+                <div class="contact-text">
+                  <a href="https://wa.me/01016852128"> +965 509 121</a>
+                </div>
+              </div>
+              <div class="contact-desc">
+                <div class="icon-container">
+                  <fa-icon [icon]="faFacebook" class="facebook-icon"></fa-icon>
+                </div>
+                <div class="contact-text">
+                  <a href="mailto:synaxiscompany@gmail.com">Mohamed kamal</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

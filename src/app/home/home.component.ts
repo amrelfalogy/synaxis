@@ -1,4 +1,10 @@
 import { Component, HostListener } from '@angular/core';
+import {
+  faFacebook,
+  faInstagram,
+  faTwitter,
+  faWhatsapp,
+} from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +12,11 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
+  faInstagram = faInstagram;
+  faWhatsapp = faWhatsapp;
+  faFacebook = faFacebook;
+  faTwitter = faTwitter;
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const sections = document.querySelectorAll('.section');

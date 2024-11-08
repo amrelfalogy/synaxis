@@ -7,20 +7,24 @@
           <h1 class="cinzel-decorative">
             <span
               *ngFor="
-                let letter of 'We &nbsp; Offer &nbsp; Luxury&nbsp; Life'.split(
-                  ''
+                let word of 'We &nbsp; Offer &nbsp; Luxury&nbsp; Life'.split(
+                  ' '
                 );
                 let i = index
               "
-              [style.animationDelay]="i * 0.1 + 's'"
+              [style.animationDelay]="i * 0.5 + 's'"
             >
-              {{ letter }}
+              {{ word }}
             </span>
           </h1>
         </div>
         <div class="row">
           <div class="col-md-9" style="display: flex">
-            <button class="mybtn" style="z-index: 3 !important">
+            <button
+              class="mybtn"
+              routerLink="/contact"
+              style="z-index: 3 !important"
+            >
               Consult now
             </button>
           </div>
@@ -109,8 +113,92 @@
     <div class="row">
       <div class="col" style="display: flex; justify-content: center">
         <div class="btn">
-          <button class="mybtn">view all services</button>
+          <button class="mybtn" routerLink="/coming-soon">
+            view all services
+          </button>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Meet Our Team -->
+<div class="team-section wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title mb-30">
+          <span>Meet our</span>
+          <h1>awesome team</h1>
+        </div>
+      </div>
+    </div>
+    <div class="cards-container row">
+      <div class="col-md-4">
+        <a [routerLink]="['/profiles/ceo']" class="profile-card-link">
+          <div
+            class="profile"
+            style="background-image: url('assets/imgs/CEO.jpeg')"
+          >
+            <div class="overlay">
+              <div class="about d-flex flex-column">
+                <h4>Eng. Mohamed Essam</h4>
+                <span>CEO</span>
+              </div>
+              <ul class="social-icons">
+                <li>
+                  <span class="material-symbols-outlined"> phone </span>
+                </li>
+                <li>
+                  <div class="icon-container">
+                    <fa-icon
+                      [icon]="faWhatsapp"
+                      class="whatsapp-icon"
+                      style="font-size: 22px"
+                    ></fa-icon>
+                  </div>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined"> email </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a
+          [routerLink]="['/profiles/projects-manager']"
+          class="profile-card-link"
+        >
+          <div
+            class="profile"
+            style="background-image: url('assets/imgs/ProjectsManager.jpeg')"
+          >
+            <div class="overlay">
+              <div class="about d-flex flex-column">
+                <h4>Eng. Mostafa Mashaly</h4>
+                <span>Projects Manager</span>
+              </div>
+              <ul class="social-icons">
+                <li>
+                  <span class="material-symbols-outlined"> phone </span>
+                </li>
+                <li>
+                  <div class="icon-container">
+                    <fa-icon
+                      [icon]="faWhatsapp"
+                      class="whatsapp-icon"
+                      style="font-size: 22px"
+                    ></fa-icon>
+                  </div>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined"> email </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   </div>
