@@ -39,16 +39,16 @@
               routerLink="home"
               [routerLinkActive]="['active']"
               (click)="collapseNavbar()"
-              >HOME</a
+              >{{ "layout.nav.home" | translate }}</a
             >
           </li>
           <li class="nav-item dropdown">
             <a
               class="nav-link"
-              class="nav-link"
               routerLink="about"
+              [routerLinkActive]="['active']"
               (click)="collapseNavbar()"
-              >about</a
+              >{{ "layout.nav.about" | translate }}</a
             >
           </li>
 
@@ -61,7 +61,7 @@
               aria-expanded="false"
               (click)="collapseNavbar()"
             >
-              SERVICES
+              {{ "layout.nav.services" | translate }}
             </a>
             <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
               <li>
@@ -70,7 +70,7 @@
                   routerLink="coming-soon"
                   (click)="setActiveLink('coming-soon')"
                   (click)="collapseNavbar()"
-                  >Real Estate Investment and Development</a
+                  >{{ "layout.nav.services_list.real_estate" | translate }}</a
                 >
               </li>
               <li>
@@ -79,7 +79,16 @@
                   routerLink="coming-soon"
                   (click)="setActiveLink('coming-soon')"
                   (click)="collapseNavbar()"
-                  >Exhibitions</a
+                  >{{ "layout.nav.services_list.Exhibitions" | translate }}
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  routerLink="coming-soon"
+                  (click)="setActiveLink('coming-soon')"
+                  (click)="collapseNavbar()"
+                  >{{ "layout.nav.services_list.events" | translate }}</a
                 >
               </li>
               <li>
@@ -88,16 +97,7 @@
                   routerLink="coming-soon"
                   (click)="setActiveLink('coming-soon')"
                   (click)="collapseNavbar()"
-                  >events</a
-                >
-              </li>
-              <li>
-                <a
-                  class="dropdown-item"
-                  routerLink="coming-soon"
-                  (click)="setActiveLink('coming-soon')"
-                  (click)="collapseNavbar()"
-                  >constructions</a
+                  >{{ "layout.nav.services_list.constructions" | translate }}</a
                 >
               </li>
             </ul>
@@ -110,7 +110,7 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              projects
+              {{ "layout.nav.projects" | translate }}
             </a>
             <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
               <li>
@@ -118,7 +118,9 @@
                   class="dropdown-item"
                   routerLink="coming-soon"
                   (click)="collapseNavbar()"
-                  >Synaxis city intertainment</a
+                  >{{
+                    "layout.nav.projects_list.city_entertainment" | translate
+                  }}</a
                 >
               </li>
               <li>
@@ -127,7 +129,7 @@
                   routerLink="coming-soon"
                   (click)="setActiveLink('coming-soon')"
                   (click)="collapseNavbar()"
-                  >synaxis events</a
+                  >{{ "layout.nav.projects_list.events" | translate }}</a
                 >
               </li>
               <li>
@@ -136,7 +138,7 @@
                   routerLink="coming-soon"
                   (click)="setActiveLink('coming-soon')"
                   (click)="collapseNavbar()"
-                  >Synaxis Durable Goods Exhibition</a
+                  >{{ "layout.nav.projects_list.durable_goods" | translate }}</a
                 >
               </li>
             </ul>
@@ -145,56 +147,56 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              routerLink="coming-soon"
+              routerLink="news"
+              [routerLinkActive]="['active']"
               (click)="collapseNavbar()"
-              >gallary
+              >{{ "layout.nav.news" | translate }}
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="contact" (click)="collapseNavbar()"
-              >CONTACT
+            <a
+              class="nav-link"
+              routerLink="contact"
+              [routerLinkActive]="['active']"
+              (click)="collapseNavbar()"
+              >{{ "layout.nav.contact" | translate }}
             </a>
           </li>
         </ul>
-      </div>
-      <div
-        class="collapse navbar-collapse"
-        id="nav-icons"
-        style="justify-content: end"
-      >
         <div
-          style="
-            display: inline-block;
-            padding: 10px;
-            font-size: 16px;
-            cursor: pointer;
-          "
+          class="navbar-collapse"
+          id="nav-icons"
+          style="justify-content: end"
         >
-          <span class="material-symbols-outlined" style="color: white">
-            shopping_bag
-          </span>
+          <!-- Language Selector Dropdown -->
+          <div class="dropdown" style="display: inline-block">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="languageDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              {{ currentLang === "ar" ? "العربية" : "English" }}
+            </button>
+            <ul
+              class="dropdown-menu"
+              aria-labelledby="languageDropdown"
+              style="background-color: #142534; color: white; cursor: pointer"
+            >
+              <li>
+                <a class="dropdown-item" (click)="onLanguageChange('en')"
+                  >English</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" (click)="onLanguageChange('ar')"
+                  >Arabic</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-        <app-cart
-          *ngIf="cartComponent.isVisible"
-          class="cart-container"
-        ></app-cart>
-        <div
-          style="
-            display: inline-block;
-            padding: 10px;
-            font-size: 16px;
-            cursor: pointer;
-          "
-        >
-          <span
-            class="material-symbols-outlined"
-            style="color: white; display: contents"
-          >
-            account_circle
-          </span>
-        </div>
-
-        <!-- <button class="btn mb-auto" routerLink="../login">Login</button> -->
       </div>
     </div>
   </nav>
@@ -206,17 +208,21 @@
     <div class="row">
       <!-- Get in Touch Column -->
       <div class="col-sm-3">
-        <h3 class="footer-title">Get in Touch</h3>
+        <h3 class="footer-title">
+          {{ "layout.footer.get_in_touch" | translate }}
+        </h3>
         <div class="footer-links">
           <div class="contact-item">
             <span class="material-symbols-outlined">mail</span>
-            <a href="mailto:synaxisinformation@gmail.com"
-              >synaxisinformation&#64;gmail.com</a
-            >
+            <a href="mailto:synaxisinformation@gmail.com">
+              {{ "layout.footer.email" | translate }}
+            </a>
           </div>
           <div class="contact-item">
             <span class="material-symbols-outlined">call</span>
-            <span style="font-size: 16px">01016852128</span>
+            <span style="font-size: 16px">{{
+              "layout.footer.phone" | translate
+            }}</span>
           </div>
           <a
             style="text-decoration: none; color: inherit"
@@ -224,43 +230,81 @@
             href="https://wa.me/01016852128"
           >
             <fa-icon [icon]="faWhatsapp" class="whatsapp-icon"></fa-icon>
-            <a href="https://wa.me/01016852128"> +965 509 121</a>
+            <a href="https://wa.me/01016852128">{{
+              "layout.footer.whatsapp" | translate
+            }}</a>
           </a>
         </div>
       </div>
 
       <!-- Information Column -->
       <div class="col-sm-3">
-        <h3 class="footer-title">Information</h3>
+        <h3 class="footer-title">
+          {{ "layout.footer.information" | translate }}
+        </h3>
         <ul class="footer-links">
-          <li><a routerLink="about">About Us</a></li>
-          <li><a routerLink="coming-soon">Gallary</a></li>
-          <li><a routerLink="contact">Contact Info</a></li>
+          <li>
+            <a routerLink="about">{{ "layout.footer.about_us" | translate }}</a>
+          </li>
+          <li>
+            <a routerLink="coming-soon">{{
+              "layout.footer.gallery" | translate
+            }}</a>
+          </li>
+          <li>
+            <a routerLink="contact">{{
+              "layout.footer.contact_info" | translate
+            }}</a>
+          </li>
         </ul>
       </div>
 
       <!-- Support Column -->
       <div class="col-sm-3">
-        <h3 class="footer-title">Support</h3>
+        <h3 class="footer-title">{{ "layout.footer.support" | translate }}</h3>
         <ul class="footer-links">
-          <li><a routerLink="coming-soon">FAQ</a></li>
-          <li><a routerLink="coming-soon">Help Center</a></li>
-          <li><a routerLink="coming-soon">Customer Service</a></li>
+          <li>
+            <a routerLink="coming-soon">{{
+              "layout.footer.faq" | translate
+            }}</a>
+          </li>
+          <li>
+            <a routerLink="coming-soon">{{
+              "layout.footer.help_center" | translate
+            }}</a>
+          </li>
+          <li>
+            <a routerLink="coming-soon">{{
+              "layout.footer.customer_service" | translate
+            }}</a>
+          </li>
         </ul>
       </div>
 
       <!-- Policies Column -->
       <div class="col-sm-3">
-        <h3 class="footer-title">Policies</h3>
+        <h3 class="footer-title">{{ "layout.footer.policies" | translate }}</h3>
         <ul class="footer-links">
-          <li><a routerLink="coming-soon">Privacy Policy</a></li>
-          <li><a routerLink="coming-soon">Terms & Conditions</a></li>
-          <li><a routerLink="coming-soon">Return Policy</a></li>
+          <li>
+            <a routerLink="coming-soon">{{
+              "layout.footer.privacy_policy" | translate
+            }}</a>
+          </li>
+          <li>
+            <a routerLink="coming-soon">{{
+              "layout.footer.terms_conditions" | translate
+            }}</a>
+          </li>
+          <li>
+            <a routerLink="coming-soon">{{
+              "layout.footer.return_policy" | translate
+            }}</a>
+          </li>
         </ul>
       </div>
     </div>
   </div>
   <div class="sub-footer text-center">
-    © Copyright {{ currentYear }} Synaxis. All rights reserved.
+    {{ "layout.footer.copyright" | translate : { year: currentYear } }}
   </div>
 </footer>

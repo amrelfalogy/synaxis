@@ -6,6 +6,7 @@ html {
   opacity: 0;
   transform: translateY(20px); /* Start below */
   animation: wordAnimation 1s ease forwards;
+  margin-right: 10px;
 }
 
 @keyframes wordAnimation {
@@ -161,7 +162,6 @@ html {
 .cards-container {
   display: flex;
 
-  justify-content: space-around;
   align-items: center;
   padding: 50px 0;
   font-family: "Roboto", sans-serif;
@@ -246,8 +246,9 @@ html {
   border: none;
 
   .mybtn {
-    width: 221px;
-    height: 58px;
+    width: 190px;
+    height: 52px;
+    margin-top: 10px;
     color: #001f3f;
     border: 1px solid #001f3f;
   }
@@ -272,13 +273,13 @@ html {
   display: grid;
   text-align: center;
   justify-content: center;
-  padding: 6% 21%;
+  padding: 6% 11%;
 }
 .message .container p {
   font-size: 17px;
 
   font-family: sans-serif;
-  color: white;
+  color: #ffffffbd;
   z-index: 5;
 }
 .message .container h1 {
@@ -299,93 +300,155 @@ html {
   padding-bottom: 80px;
 }
 
-/* Meet Our Team */
-.wrapper {
+/* Sell Property Section */
+.sell-property-section {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
-  background: #f4f4f4;
-  z-index: 1;
+  background-color: #eeeeee;
+  padding: 75px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: relative;
-}
-.profile-card-link {
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  justify-content: center;
-}
-.wrapper .title {
-  margin: 30px 0;
 }
 
-.wrapper .cards-container {
-  justify-content: center;
-  padding-bottom: 120px;
+.sell-property-content {
+  padding-right: 20px !important;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
-.profile {
-  position: relative;
-  width: 320px;
-  height: 370px;
-  box-shadow: 0 5px 30px 10px rgb(19 0 0 / 20%);
-  background-size: cover;
-  cursor: pointer;
-  border: 12px;
-  margin-bottom: 30px;
+
+.sell-property-content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.sell-property-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.sell-btn {
+  background-color: #001f3f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
   border-radius: 6px;
-}
-.profile:hover {
-  box-shadow: 0 8px 18px 0 #142534;
-  transform: scale(1.02);
-  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  font-weight: 500;
 }
 
-.overlay {
+.sell-btn:hover {
+  background-color: #001c38;
+}
+
+.sell-property-video {
+  flex: 1;
+  position: relative;
+  max-width: 530px;
+}
+
+.sell-property-video video {
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 12px;
-  cursor: pointer;
-  opacity: 0;
-  transition: all 1s;
-
-  border-radius: 6px;
+  border-radius: 80px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.profile:hover .overlay {
+
+@media (max-width: 768px) {
+  .sell-property-section .row {
+    flex-direction: column-reverse;
+  }
+  .sell-property-content {
+    text-align: center;
+  }
+}
+
+/* Properties List Section */
+.properties-list-section {
+  padding: 60px 20px;
+  background-color: #f7f9fc;
+  position: relative;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.properties-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.property-card .card {
+  align-items: center;
+  justify-content: flex-end;
+  height: 22rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.property-card img {
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+.property-card img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.property-card .card-body {
+  background-color: white;
+  z-index: 2;
+  width: 88%;
+  max-height: 140px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.property-card .card-title {
+  font-size: 1.2rem;
+  color: #0e0e0e;
+}
+.property-type {
+  font-size: 13px;
+  right: 10px;
+  position: absolute;
+  background-color: rgb(188 0 19);
+  color: white;
+  padding: 5px 9px;
+  border-radius: 8px;
+  font-weight: 400;
+  border: none;
+}
+.property-type.rtl {
+  right: auto !important;
+  left: 10px !important;
+}
+.property-card .card-text {
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0 15px;
+  position: unset;
+  max-width: 100%;
+  transition: none;
   opacity: 1;
 }
-.social-icons {
-  display: flex;
-  list-style: none;
-  bottom: 10px;
-  position: absolute;
-  text-align: center;
-  justify-content: center;
-  width: 100%;
-  padding: 0;
-}
-.social-icons li {
-  width: 25px;
-  height: 25px;
-  border: 1px solid #eee;
-  padding: 20px;
-  margin-right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  border-radius: 5px;
-  transition: all 1s;
-}
-.social-icons li:hover {
-  background: #fff;
-  color: #000;
-}
-.overlay .about {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  top: 40%;
-  color: #fff;
-  flex: column;
+
+.card-body .price {
+  color: rgb(188 0 19);
+  opacity: 1;
+  font-weight: 500;
+  position: unset;
+  max-width: 100%;
+  transition: none;
 }

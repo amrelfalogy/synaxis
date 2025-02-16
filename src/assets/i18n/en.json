@@ -1,0 +1,322 @@
+{
+  "layout": {
+    "nav": {
+      "home": "HOME",
+      "about": "About",
+      "services": "Services",
+      "services_list": {
+        "real_estate": "Real Estate Investment and Development",
+        "exhibitions": "Exhibitions",
+        "events": "Events",
+        "constructions": "Constructions"
+      },
+      "projects": "Projects",
+      "projects_list": {
+        "city_entertainment": "Synaxis City Entertainment",
+        "events": "Synaxis Events",
+        "durable_goods": "Synaxis Durable Goods Exhibition"
+      },
+      "news": "News",
+      "contact": "Contact",
+      "language": "Language",
+      "english": "English",
+      "arabic": "Arabic"
+    },
+    "footer": {
+      "get_in_touch": "Get in Touch",
+      "email": "synaxisinformation@gmail.com",
+      "phone": "01016852128",
+      "whatsapp": "+965 509 121",
+      "information": "Information",
+      "about_us": "About Us",
+      "gallery": "Gallery",
+      "contact_info": "Contact Info",
+      "support": "Support",
+      "faq": "FAQ",
+      "help_center": "Help Center",
+      "customer_service": "Customer Service",
+      "policies": "Policies",
+      "privacy_policy": "Privacy Policy",
+      "terms_conditions": "Terms & Conditions",
+      "return_policy": "Return Policy",
+      "copyright": "© Copyright {{ year }} Synaxis. All rights reserved."
+    }
+  },
+
+  "home": {
+    "header": {
+      "title": "We Offer Luxury Life",
+      "consult_now": "Consult now",
+      "synaxis_intro": "We are Synaxis Investments"
+    },
+    "message": {
+      "title": "Synaxis Investment",
+      "description": "We are committed not only to providing high-quality products and services, but also to going above and beyond to ensure complete customer satisfaction."
+    },
+    "services_section": {
+      "title": "Our Services",
+      "subtitle": "Let's know about",
+      "description": "We provide innovative and high-quality construction services to enhance urban development and support national projects.",
+      "real_estate": {
+        "title": "Real Estate",
+        "description": "We offer comprehensive real estate marketing services, finishing solutions for developers, and engineering consultations."
+      },
+      "constructions": {
+        "title": "Constructions",
+        "description": "From building urban cities to developing new industrial zones, we aim to create sustainable and modern infrastructures."
+      },
+      "events": {
+        "title": "Events & Advertising",
+        "description": "We specialize in organizing exhibitions, conferences, and promotional campaigns to support business growth and networking."
+      },
+      "view_all_services": "View all services"
+    },
+    "sell_property": {
+      "title": "Place your ad for free",
+      "description1": "Upload your property details and connect with potential buyers.",
+      "description2": " Showcase your property now!",
+      "add_property": "place your add"
+    },
+    "properties_list": {
+      "title": "Available Properties",
+      "property_card": {
+        "title": "Modern Apartment",
+        "type_for_sale": "For Sale",
+        "type_for_rent": "For Rent",
+        "location": "Cairo",
+        "size": "1,200 sq.ft",
+        "price_sale": "1250000 EGP",
+        "price_rent": "75000 EGP"
+      },
+      "see_more": "See more",
+      "no_properties": "No properties available!",
+      "first_ad_offer": "Be the first to get the opportunity to add your ad for free!"
+    }
+  },
+
+  "about": {
+    "TITLE": "About Us",
+    "BREADCRUMB": {
+      "HOME": "Home",
+      "ABOUT_US": "About Us"
+    },
+    "WHO_WE_ARE": {
+      "TITLE": "Who We Are",
+      "CONTENT": "The roots of Synaxis Company and its main headquarters go back to the Emirate of Abu Dhabi after the success of engineer Mohamed Kamal in the Arab Gulf countries through project management and general contracting, which led to gaining experience through the implementation of approximately 60 projects inside and outside Egypt for a period exceeding 20 years. Here, plans were made and the foundation stone was laid to establish the Synaxis entity inside Egypt in order to complete the journey of success within Egypt and provide a high level of services."
+    },
+    "OUR_VISION": {
+      "TITLE": "Our Vision",
+      "CONTENT": "Synaxis Company aspires to be the first and even the largest business leader in the region and at the level of the Middle East, through planned businesses and partnerships with both the private and government sectors. It also aspires to raise the employment rate and raise the level of efficiency, experience and work standards, in addition to contributing with the government and the private sector. And businessmen to move forward with our investments in all sectors and achieve profits together."
+    }
+  },
+
+  "addProperty": {
+    "header": "Add Your Property",
+    "form": {
+      "title": "Title",
+      "titlePlaceholder": "Property title",
+      "titleError": "Title is required and must be at least 5 characters.",
+      "type": "Type",
+      "typePlaceholder": "Choose type",
+      "typeOptions": {
+        "rent": "Rent",
+        "sell": "Sell"
+      },
+      "typeError": "Type is required.",
+      "description": "Description",
+      "descriptionPlaceholder": "Property details",
+      "descriptionError": "Description is required and must be at least 20 characters long.",
+      "propertyType": "Property Type",
+      "propertyTypeOptions": {
+        "apartment": "Apartment",
+        "house": "House",
+        "villa": "Villa",
+        "commercial": "Commercial Shop",
+        "land": "Land"
+      },
+      "propertyTypeError": "Property type is required.",
+      "price": "Price (EGP)",
+      "pricePlaceholder": "Enter price",
+      "priceError": "Price is required and must be greater than 0.",
+      "squareFootage": "Square Footage (sqm)",
+      "squareFootagePlaceholder": "Enter square footage",
+      "squareFootageError": "Square footage is required and must be greater than 0.",
+      "city": "City",
+      "cityPlaceholder": "Enter city",
+      "cityError": "City is required.",
+      "address": "Address",
+      "addressPlaceholder": "Enter address",
+      "addressError": "Address is required.",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Enter phone number",
+      "phoneError": "Phone number is required and must be between 10-15 digits.",
+      "uploadImages": "Upload Images (Max: 5)",
+      "uploadImagesNote": "Each file should not exceed 2MB.",
+      "fileErrors": {
+        "fileSize": "File size should not exceed 2MB.",
+        "fileCount": "You can upload up to 5 files only."
+      },
+      "confirmPolicies": "I agree to the platform policies and terms of use.",
+      "confirmPoliciesError": "You must agree to the policies.",
+      "submitButton": "Submit Property",
+      "previewHeader": "Preview",
+      "preview": {
+        "title": "Title",
+        "description": "Description",
+        "type": "Type",
+        "price": "Price",
+        "squareFootage": "Square Footage",
+        "address": "Address",
+        "city": "City",
+        "phone": "Phone"
+      }
+    }
+  },
+
+  "CONTACT": {
+    "BREADCRUMB": {
+      "HOME": "Home",
+      "CONTACT_US": "Contact"
+    },
+    "TITLE": "Contact Us",
+    "DESCRIPTION": "We are here to help you. Reach out to us through the form or use the contact details below. Our team is ready to assist with any inquiries or feedback, and we will respond as quickly as possible to meet your needs.",
+    "EMAIL": "Email",
+    "PHONE": "Phone",
+    "WHATSAPP": "WhatsApp",
+    "FORM_TITLE": "Evaluate Your Property for Free",
+    "FORM_SUBTITLE": "Fill the fields below, and our expert team will contact you to evaluate your property for free.",
+    "PLACEHOLDERS": {
+      "NAME": "Name*",
+      "EMAIL": "Email*",
+      "MESSAGE": "Message*"
+    },
+    "ERRORS": {
+      "NAME_REQUIRED": "Please provide your name.",
+      "NAME_MINLENGTH": "Name must be at least 3 characters long.",
+      "EMAIL_REQUIRED": "Whatsapp phone nuber  is required.",
+      "EMAIL_INVALID": "Please enter a valid number.",
+      "MESSAGE_REQUIRED": "Please enter your message.",
+      "MESSAGE_MINLENGTH": "Your message must be at least 10 characters long."
+    },
+    "SUBMIT": "Submit"
+  },
+
+  "team": {
+    "header": {
+      "sub": "Meet our",
+      "main": "awesome team"
+    },
+    "members": [
+      {
+        "name": "Eng. Mohamed Kamal",
+        "position": "Founder & CEO",
+        "image": "assets/imgs/CEO.jpeg",
+        "profileLink": "/profiles/ceo"
+      },
+      {
+        "name": "Mostafa Mashaly",
+        "position": "Projects Manager",
+        "image": "assets/imgs/ProjectsManager.jpeg",
+        "profileLink": "/profiles/projects-manager"
+      },
+      {
+        "name": "Mohamed Shorrab",
+        "position": "Branch Manager (North Sinai)",
+        "image": "assets/imgs/branchManager.jpeg",
+        "profileLink": ""
+      },
+      {
+        "name": "Amr Ashraf",
+        "position": "Software Engineer",
+        "image": "assets/imgs/amrr.jpg",
+        "profileLink": "/profiles/sw-engineer"
+      }
+    ]
+  },
+  "add_property": {
+    "TITLE": "Add Your Property",
+    "BREADCRUMB": {
+      "HOME": "Home",
+      "CONTACT": "Contact"
+    },
+    "FORM": {
+      "TITLE_LABEL": "Title",
+      "TITLE_PLACEHOLDER": "Property title",
+      "TITLE_ERROR": "Title is required and must be at least 5 characters.",
+
+      "TYPE_LABEL": "Type",
+      "TYPE_PLACEHOLDER": "Choose type",
+      "TYPE_OPTIONS": {
+        "RENT": "Rent",
+        "BUY": "Sale"
+      },
+      "TYPE_ERROR": "Type is required.",
+
+      "DESCRIPTION_LABEL": "Description",
+      "DESCRIPTION_PLACEHOLDER": "Property details",
+      "DESCRIPTION_ERROR": "Description is required and must be at least 20 characters long.",
+
+      "PROPERTY_TYPE_LABEL": "Property Type",
+      "PROPERTY_TYPE_PLACEHOLDER": "Select type",
+      "PROPERTY_TYPE_OPTIONS": {
+        "APARTMENT": "Apartment",
+        "HOUSE": "House",
+        "VILLA": "Villa",
+        "COMMERCIAL": "Commercial Shop",
+        "LAND": "Land"
+      },
+      "PROPERTY_TYPE_ERROR": "Property type is required.",
+
+      "PRICE_LABEL": "Price (EGP)",
+      "PRICE_PLACEHOLDER": "Enter price",
+      "PRICE_ERROR": "Price is required and must be greater than 0.",
+
+      "SQUARE_FOOTAGE_LABEL": "Square Footage (sqm)",
+      "SQUARE_FOOTAGE_PLACEHOLDER": "Enter square footage",
+      "SQUARE_FOOTAGE_ERROR": "Square footage is required and must be greater than 0.",
+
+      "CITY_LABEL": "City",
+      "CITY_PLACEHOLDER": "Enter city",
+      "CITY_ERROR": "City is required.",
+
+      "ADDRESS_LABEL": "Address",
+      "ADDRESS_PLACEHOLDER": "Enter address",
+      "ADDRESS_ERROR": "Address is required.",
+
+      "PHONE_LABEL": "Phone Number",
+      "PHONE_PLACEHOLDER": "Enter phone number",
+      "PHONE_ERROR": "Phone number is required and must be between 10-15 digits.",
+
+      "UPLOAD_LABEL": "Upload Images (Max: 5)",
+      "UPLOAD_NOTE": "Each file should not exceed 2MB.",
+
+      "PREVIEW_TITLE": "Preview",
+      "PREVIEW": {
+        "TITLE": "Title",
+        "DESCRIPTION": "Description",
+        "TYPE": "Type",
+        "PRICE": "Price",
+        "SQUARE_FOOTAGE": "Square Footage",
+        "ADDRESS": "Address",
+        "CITY": "City",
+        "PHONE": "Phone"
+      },
+
+      "POLICIES_LABEL": "I agree to the platform policies and terms of use.",
+      "POLICIES_ERROR": "You must agree to the policies.",
+
+      "SUBMIT_BUTTON": "Submit Property"
+    }
+  },
+  "PROPERTY_DETAILS": {
+    "TITLE": "Smart Village",
+    "PRICE": "Price",
+    "TYPE": "Type",
+    "SQUARE_FOOTAGE": "Square Footage",
+    "CITY": "City",
+    "ADDRESS": "Address",
+    "PHONE": "Phone",
+    "DESCRIPTION": "Description",
+    "GALLERY": "Gallery"
+  }
+}

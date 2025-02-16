@@ -1,0 +1,173 @@
+/* .main-image {
+  height: 679px;
+}
+.main-image img {
+  object-fit: cover;
+  width: 100%;
+  position: absolute;
+  max-height: 100%;
+  border-radius: 12px;
+}
+.property-details {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.property-info {
+  border: 1px solid #e0e0e0;
+}
+.gallery-item img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+} */
+
+.property-details {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.main-image img {
+  max-height: 500px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.property-info {
+  border: 1px solid #e0e0e0;
+  height: 500px;
+}
+.property-info h2 {
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.address {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.overview {
+  justify-content: start;
+  gap: 132px;
+  margin: 40px auto;
+}
+.overview span {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.description-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.price {
+  font-weight: 500;
+  margin: 40px auto 20px;
+  color: #cd2323;
+  font-size: 2rem;
+}
+
+.gallery-item {
+  height: 200px;
+}
+
+.gallery-item img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.gallery-item img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.gallary-col {
+  padding: 2px !important;
+}
+.gallery-item .img-fluid {
+  height: 100% !important;
+  min-width: 100% !important;
+  object-fit: cover;
+}
+
+.share-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.share-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.share-btn:hover {
+  background: #0056b3;
+}
+
+.share-options {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.share-option {
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: background 0.2s;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.share-option:last-child {
+  border-bottom: none;
+}
+
+.share-option i {
+  font-size: 18px;
+}
+
+.share-option:hover {
+  background: #f1f1f1;
+}
+
+.whatsapp {
+  color: #25d366;
+}
+
+.facebook {
+  color: #1877f2;
+}
+
+.linkedin {
+  color: #0077b5;
+}
+
+.twitter {
+  color: #1da1f2;
+}
+
+.copy-link {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+}

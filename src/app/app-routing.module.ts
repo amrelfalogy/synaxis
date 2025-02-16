@@ -7,6 +7,13 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { CeoComponent } from './profiles/ceo/ceo.component';
 import { ProjectsManagerComponent } from './profiles/projects-manager/projects-manager.component';
+import { BranchManagerComponent } from './profiles/branch-manager/branch-manager.component';
+import { SwEngineerComponent } from './profiles/sw-engineer/sw-engineer.component';
+import { NewsComponent } from './news/news.component';
+import { AddPropertyComponent } from './properties/add-property/add-property/add-property.component';
+import { PropertiesListComponent } from './properties/properties-list/properties-list/properties-list.component';
+import { PropertyDetailsComponent } from './properties/property-details/property-details/property-details.component';
+import { TeamComponent } from './team/team.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,6 +23,14 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'profiles/ceo', component: CeoComponent },
   { path: 'profiles/projects-manager', component: ProjectsManagerComponent },
+  { path: 'profiles/sw-engineer', component: SwEngineerComponent },
+  { path: 'profiles/branch-manager', component: BranchManagerComponent },
+  { path: 'news', component: NewsComponent },
+  { path: 'properties/add', component: AddPropertyComponent },
+  { path: 'properties/list', component: PropertiesListComponent },
+  { path: 'properties/details/:id', component: PropertyDetailsComponent },
+  { path: 'team', component: TeamComponent },
+
   { path: 'coming-soon', component: ComingSoonComponent },
 ];
 

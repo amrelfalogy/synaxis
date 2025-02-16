@@ -1,0 +1,92 @@
+<div class="container-fluid news-page">
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search for news, topics and more..."
+      #searchInput
+    />
+    <button (click)="searchNews(searchInput.value)">Search</button>
+  </div>
+
+  <!-- News Content -->
+  <div class="row page-content">
+    <!-- Business News Section -->
+    <div class="col-md-2 business-news">
+      <h2>Business News</h2>
+      <div *ngFor="let article of businessArticles" class="article-card">
+        <img
+          *ngIf="article.urlToImage"
+          [src]="article.urlToImage"
+          alt="Article Image"
+        />
+        <h4>{{ article.title }}</h4>
+        <a [href]="article.url" target="_blank">Read more</a>
+      </div>
+    </div>
+
+    <!-- Top Headlines Section -->
+    <div class="col-md-7 top-headlines">
+      <!-- Search Results Section -->
+      <div *ngIf="searchResults.length > 0">
+        <h2>Search Results</h2>
+        <div class="search-results grid">
+          <div *ngFor="let article of searchResults" class="article-card">
+            <img
+              *ngIf="article.urlToImage"
+              [src]="article.urlToImage"
+              alt="Article Image"
+            />
+            <h3>{{ article.title }}</h3>
+            <a [href]="article.url" target="_blank">Read more</a>
+          </div>
+        </div>
+        <hr />
+      </div>
+
+      <!-- Top Headlines Grid Section -->
+      <h2>Top Headlines</h2>
+      <div class="top-headlines grid">
+        <div *ngFor="let article of topHeadlines" class="article-card">
+          <img
+            *ngIf="article.urlToImage"
+            [src]="article.urlToImage"
+            alt="Article Image"
+          />
+          <h3>{{ article.title }}</h3>
+          <p>{{ article.description }}</p>
+          <a [href]="article.url" target="_blank">Read more</a>
+        </div>
+      </div>
+      <hr />
+      <!-- BBC Headlines Section -->
+      <h2>BBC News</h2>
+      <div class="bbc-headlines grid">
+        <div *ngFor="let article of bbcHeadlines" class="article-card">
+          <img
+            *ngIf="article.urlToImage"
+            [src]="article.urlToImage"
+            alt="Article Image"
+          />
+          <h3>{{ article.title }}</h3>
+          <a [href]="article.url" target="_blank">Read more</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Egyptian News Section -->
+    <div class="col-md-3 egypt-news">
+      <h2>Egypt News</h2>
+      <div *ngFor="let article of egyptNews" class="article-card">
+        <img
+          *ngIf="article.enclosure?.url"
+          [src]="article.enclosure.url"
+          alt="Article Image"
+        />
+        <h4>{{ article.title }}</h4>
+        <p>{{ article.contentSnippet }}</p>
+        <a [href]="article.link" target="_blank">Read more</a>
+      </div>
+    </div>
+  </div>
+</div>

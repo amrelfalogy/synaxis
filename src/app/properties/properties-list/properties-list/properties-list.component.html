@@ -1,0 +1,69 @@
+<section class="properties-list-section">
+  <div class="container">
+    <!-- Loading Spinner -->
+    <div *ngIf="isLoading" class="loading-container">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- No Properties Message -->
+    <div *ngIf="noProperties && !isLoading" class="no-properties">
+      <p class="no-properties-message">
+        {{ "home.properties_list.no_properties" | translate }}
+      </p>
+      <p class="highlight-message">
+        {{ "home.properties_list.first_ad_offer" | translate }}
+      </p>
+    </div>
+
+    <!-- Properties Grid -->
+    <div class="row properties-grid" *ngIf="!isLoading && !noProperties">
+      <h2 class="section-title">
+        {{ "home.properties_list.title" | translate }}
+      </h2>
+      <div
+        *ngFor="let property of displayedProperties"
+        class="col-lg-4 col-md-6 col-sm-12 property-card"
+      >
+        <div class="card">
+          <img
+            [src]="property.images[0]"
+            (error)="property.images[0] = 'assets/imgs/6-0.png'"
+            class="card-img-top"
+            alt="Property Image"
+            [routerLink]="['/properties/details', property._id]"
+          />
+          <div class="card-body">
+            <h5 class="card-title">
+              {{ property.title }}
+              <span [ngClass]="{ rtl: isArabic }" class="property-type">
+                {{
+                  property.type === "buy"
+                    ? ("home.properties_list.property_card.type_for_sale"
+                      | translate)
+                    : ("home.properties_list.property_card.type_for_rent"
+                      | translate)
+                }}
+              </span>
+            </h5>
+            <p class="card-text">
+              {{ property.city }} • {{ property.squareFootage }} sqft
+            </p>
+            <p class="price">
+              {{ property.price | currency : "EGP" }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- "See More" Button -->
+    <div
+      class="see-more-container"
+      *ngIf="!isLoading && displayedProperties.length < properties.length"
+    >
+      <button (click)="showMore()" class="see-more-btn">
+        {{ "home.properties_list.see_more" | translate }}
+      </button>
+    </div>
+  </div>
+</section>

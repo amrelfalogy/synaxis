@@ -7,9 +7,7 @@
           <h1 class="cinzel-decorative">
             <span
               *ngFor="
-                let word of 'We &nbsp; Offer &nbsp; Luxury&nbsp; Life'.split(
-                  ' '
-                );
+                let word of ('home.header.title' | translate).split(' ');
                 let i = index
               "
               [style.animationDelay]="i * 0.5 + 's'"
@@ -25,11 +23,11 @@
               routerLink="/contact"
               style="z-index: 3 !important"
             >
-              Consult now
+              {{ "home.header.consult_now" | translate }}
             </button>
           </div>
           <div class="notice col-md-3">
-            <h3>We are <span>synaxis investments</span></h3>
+            <h3>{{ "home.header.synaxis_intro" | translate }}</h3>
           </div>
         </div>
       </div>
@@ -37,169 +35,105 @@
   </div>
 </div>
 
-<!-- Message -->
-
 <section class="message section">
   <div class="row">
     <div class="col-md-12">
       <div class="content container">
-        <h1>synaxis investment</h1>
+        <h1>{{ "home.message.title" | translate }}</h1>
         <p>
-          We are committed not only to providing high-quality products and
-          services, but also to going above and beyond to ensure complete
-          customer satisfaction.
+          {{ "home.message.description" | translate }}
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ************  services section  ********  -->
 <div class="services-section">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="title mb-30">
-          <span>let's know about</span>
-          <h1>our construction services</h1>
-          <p style="padding: 6px 20%">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At sapiente
-            dolor consequatur eius placeat aspernatur sit aperiam sequi vitae
+          <span>{{ "home.services_section.subtitle" | translate }}</span>
+          <h1>{{ "home.services_section.title" | translate }}</h1>
+          <p style="padding: 6px 0px; color: #1c1c1cd1">
+            {{ "home.services_section.description" | translate }}
           </p>
         </div>
       </div>
     </div>
     <div class="row cards-container">
-      <div class="col-sm-4">
+      <div class="col-lg-4 col-md-6 col-sm-12">
         <div class="card">
           <img src="assets/imgs/ser1.jpeg" alt="serviceImg" />
           <div class="overlay"></div>
           <div class="card-content">
-            <h2>Card Heading</h2>
+            <h2>{{ "home.services_section.real_estate.title" | translate }}</h2>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-              exercitationem iste, voluptatum, quia explicabo laboriosam rem
+              {{ "home.services_section.real_estate.description" | translate }}
             </p>
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-lg-4 col-md-6 col-sm-12">
         <div class="card">
           <img src="assets/imgs/s4.jpg" alt="serviceImg" />
           <div class="overlay"></div>
           <div class="card-content">
-            <h2>Card Heading</h2>
+            <h2>
+              {{ "home.services_section.constructions.title" | translate }}
+            </h2>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-              exercitationem iste, voluptatum, quia explicabo laboriosam rem
+              {{
+                "home.services_section.constructions.description" | translate
+              }}
             </p>
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-lg-4 col-md-6 col-sm-12">
         <div class="card">
           <img src="assets/imgs/ser3.jpeg" alt="serviceImg" />
           <div class="overlay"></div>
           <div class="card-content">
-            <h2>Card Heading</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-              exercitationem iste, voluptatum, quia explicabo laboriosam rem
-            </p>
+            <h2>{{ "home.services_section.events.title" | translate }}</h2>
+            <p>{{ "home.services_section.events.description" | translate }}</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="row">
+    <!-- <div class="row">
       <div class="col" style="display: flex; justify-content: center">
         <div class="btn">
           <button class="mybtn" routerLink="/coming-soon">
-            view all services
+            {{ "home.services_section.view_all_services" | translate }}
           </button>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
-<!-- Meet Our Team -->
-<div class="team-section wrapper">
+
+<section class="sell-property-section">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="title mb-30">
-          <span>Meet our</span>
-          <h1>awesome team</h1>
-        </div>
+    <div class="row d-flex flex-wrap">
+      <div class="sell-property-content col-md-6 col-12">
+        <h2>{{ "home.sell_property.title" | translate }}</h2>
+        <p>
+          {{ "home.sell_property.description1" | translate }} <br />
+          {{ "home.sell_property.description2" | translate }}
+        </p>
+        <button class="sell-btn" routerLink="/properties/add">
+          {{ "home.sell_property.add_property" | translate }}
+        </button>
       </div>
-    </div>
-    <div class="cards-container row">
-      <div class="col-md-4">
-        <a [routerLink]="['/profiles/ceo']" class="profile-card-link">
-          <div
-            class="profile"
-            style="background-image: url('assets/imgs/CEO.jpeg')"
-          >
-            <div class="overlay">
-              <div class="about d-flex flex-column">
-                <h4>Eng. Mohamed Essam</h4>
-                <span>CEO</span>
-              </div>
-              <ul class="social-icons">
-                <li>
-                  <span class="material-symbols-outlined"> phone </span>
-                </li>
-                <li>
-                  <div class="icon-container">
-                    <fa-icon
-                      [icon]="faWhatsapp"
-                      class="whatsapp-icon"
-                      style="font-size: 22px"
-                    ></fa-icon>
-                  </div>
-                </li>
-                <li>
-                  <span class="material-symbols-outlined"> email </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-4">
-        <a
-          [routerLink]="['/profiles/projects-manager']"
-          class="profile-card-link"
-        >
-          <div
-            class="profile"
-            style="background-image: url('assets/imgs/ProjectsManager.jpeg')"
-          >
-            <div class="overlay">
-              <div class="about d-flex flex-column">
-                <h4>Eng. Mostafa Mashaly</h4>
-                <span>Projects Manager</span>
-              </div>
-              <ul class="social-icons">
-                <li>
-                  <span class="material-symbols-outlined"> phone </span>
-                </li>
-                <li>
-                  <div class="icon-container">
-                    <fa-icon
-                      [icon]="faWhatsapp"
-                      class="whatsapp-icon"
-                      style="font-size: 22px"
-                    ></fa-icon>
-                  </div>
-                </li>
-                <li>
-                  <span class="material-symbols-outlined"> email </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </a>
+      <div class="sell-property-video col-md-6 col-12">
+        <video autoplay muted loop playsinline>
+          <source src="assets/videos/property-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<app-properties-list></app-properties-list>

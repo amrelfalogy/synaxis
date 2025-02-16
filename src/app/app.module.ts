@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +17,19 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { DropdownDirective } from './directives/dropdown.directive';
 
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { BranchManagerComponent } from './profiles/branch-manager/branch-manager.component';
+import { SwEngineerComponent } from './profiles/sw-engineer/sw-engineer.component';
+import { AddPropertyComponent } from './properties/add-property/add-property/add-property.component';
+import { PropertiesListComponent } from './properties/properties-list/properties-list/properties-list.component';
+import { PropertyDetailsComponent } from './properties/property-details/property-details/property-details.component';
+import { NewsComponent } from './news/news.component';
+import { TeamComponent } from './team/team.component';
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,8 +39,15 @@ import { DropdownDirective } from './directives/dropdown.directive';
     ComingSoonComponent,
     CeoComponent,
     ProjectsManagerComponent,
+    BranchManagerComponent,
+    SwEngineerComponent,
     AboutComponent,
     ContactComponent,
+    AddPropertyComponent,
+    PropertiesListComponent,
+    PropertyDetailsComponent,
+    TeamComponent,
+    NewsComponent,
     DropdownDirective,
   ],
   imports: [
@@ -37,6 +57,14 @@ import { DropdownDirective } from './directives/dropdown.directive';
     RouterModule,
     ReactiveFormsModule,
     HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+      defaultLanguage: 'en',
+    }),
   ],
   providers: [CartComponent],
   bootstrap: [AppComponent],

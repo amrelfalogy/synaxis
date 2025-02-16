@@ -5,6 +5,7 @@ import {
   faTwitter,
   faWhatsapp,
 } from '@fortawesome/free-brands-svg-icons';
+import { LanguageService } from '../services/languages.service';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +17,15 @@ export class HomeComponent {
   faWhatsapp = faWhatsapp;
   faFacebook = faFacebook;
   faTwitter = faTwitter;
+  isArabic: boolean = false;
+
+  constructor(private languageService: LanguageService) {}
+
+  ngOnInit(): void {
+    this.languageService.currentLanguage$.subscribe((lang) => {
+      this.isArabic = lang === 'ar';
+    });
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

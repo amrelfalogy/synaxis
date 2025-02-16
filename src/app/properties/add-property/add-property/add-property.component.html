@@ -1,0 +1,398 @@
+<div class="property-page">
+  <!-- Hero Section -->
+  <div class="row">
+    <div class="col-md-12">
+      <section
+        class="header img-fluid"
+        style="background-image: url('assets/imgs/h2.jpg')"
+      >
+        <div class="overlay"></div>
+        <div class="header-content">
+          <h1>{{ "add_property.BREADCRUMB.CONTACT" | translate }}</h1>
+          <h3>
+            <a routerLink="/home" style="color: inherit; text-decoration: none">
+              {{ "add_property.BREADCRUMB.HOME" | translate }}
+            </a>
+            - <span> {{ "add_property.BREADCRUMB.CONTACT" | translate }} </span>
+          </h3>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1 class="text-center">{{ "add_property.TITLE" | translate }}</h1>
+    <div class="row">
+      <!-- Form Section -->
+      <div class="col-lg-7 col-md-12 form-section">
+        <form [formGroup]="propertyForm" (ngSubmit)="onSubmit()">
+          <!-- Title and Type -->
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="title">{{
+                "add_property.FORM.TITLE_LABEL" | translate
+              }}</label>
+              <input
+                type="text"
+                id="title"
+                formControlName="title"
+                class="form-control"
+                [placeholder]="
+                  'add_property.FORM.TITLE_PLACEHOLDER' | translate
+                "
+              />
+              <small
+                *ngIf="
+                  propertyForm.get('title')?.invalid &&
+                  propertyForm.get('title')?.touched
+                "
+                class="text-danger"
+              >
+                {{ "add_property.FORM.TITLE_ERROR" | translate }}
+              </small>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="type">{{
+                "add_property.FORM.TYPE_LABEL" | translate
+              }}</label>
+              <select id="type" formControlName="type" class="form-control">
+                <option value="" disabled selected>
+                  {{ "add_property.FORM.TYPE_PLACEHOLDER" | translate }}
+                </option>
+                <option value="rent">
+                  {{ "add_property.FORM.TYPE_OPTIONS.RENT" | translate }}
+                </option>
+                <option value="buy">
+                  {{ "add_property.FORM.TYPE_OPTIONS.BUY" | translate }}
+                </option>
+              </select>
+              <small
+                *ngIf="
+                  propertyForm.get('type')?.invalid &&
+                  propertyForm.get('type')?.touched
+                "
+                class="text-danger"
+              >
+                {{ "add_property.FORM.TYPE_ERROR" | translate }}
+              </small>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="form-group">
+            <label for="description">{{
+              "add_property.FORM.DESCRIPTION_LABEL" | translate
+            }}</label>
+            <textarea
+              id="description"
+              formControlName="description"
+              class="form-control"
+              [placeholder]="
+                'add_property.FORM.DESCRIPTION_PLACEHOLDER' | translate
+              "
+              rows="3"
+            ></textarea>
+            <small
+              *ngIf="
+                propertyForm.get('description')?.invalid &&
+                propertyForm.get('description')?.touched
+              "
+              class="text-danger"
+            >
+              {{ "add_property.FORM.DESCRIPTION_ERROR" | translate }}
+            </small>
+          </div>
+
+          <!-- Property Type, Price, and Square Footage -->
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="propertyType">{{
+                "add_property.FORM.PROPERTY_TYPE_LABEL" | translate
+              }}</label>
+              <select
+                id="propertyType"
+                formControlName="propertyType"
+                class="form-control"
+              >
+                <option value="" disabled selected>
+                  {{
+                    "add_property.FORM.PROPERTY_TYPE_PLACEHOLDER" | translate
+                  }}
+                </option>
+                <option value="apartment">
+                  {{
+                    "add_property.FORM.PROPERTY_TYPE_OPTIONS.APARTMENT"
+                      | translate
+                  }}
+                </option>
+                <option value="house">
+                  {{
+                    "add_property.FORM.PROPERTY_TYPE_OPTIONS.HOUSE" | translate
+                  }}
+                </option>
+                <option value="villa">
+                  {{
+                    "add_property.FORM.PROPERTY_TYPE_OPTIONS.VILLA" | translate
+                  }}
+                </option>
+                <option value="commercial">
+                  {{
+                    "add_property.FORM.PROPERTY_TYPE_OPTIONS.COMMERCIAL"
+                      | translate
+                  }}
+                </option>
+                <option value="land">
+                  {{
+                    "add_property.FORM.PROPERTY_TYPE_OPTIONS.LAND" | translate
+                  }}
+                </option>
+              </select>
+              <small
+                *ngIf="
+                  propertyForm.get('propertyType')?.invalid &&
+                  propertyForm.get('propertyType')?.touched
+                "
+                class="text-danger"
+              >
+                {{ "add_property.FORM.PROPERTY_TYPE_ERROR" | translate }}
+              </small>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="price">{{
+                "add_property.FORM.PRICE_LABEL" | translate
+              }}</label>
+              <input
+                type="number"
+                id="price"
+                formControlName="price"
+                class="form-control"
+                [placeholder]="
+                  'add_property.FORM.PRICE_PLACEHOLDER' | translate
+                "
+              />
+              <small
+                *ngIf="
+                  propertyForm.get('price')?.invalid &&
+                  propertyForm.get('price')?.touched
+                "
+                class="text-danger"
+              >
+                {{ "add_property.FORM.PRICE_ERROR" | translate }}
+              </small>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="squareFootage">{{
+                "add_property.FORM.SQUARE_FOOTAGE_LABEL" | translate
+              }}</label>
+              <input
+                type="number"
+                id="squareFootage"
+                formControlName="squareFootage"
+                class="form-control"
+                [placeholder]="
+                  'add_property.FORM.SQUARE_FOOTAGE_PLACEHOLDER' | translate
+                "
+              />
+              <small
+                *ngIf="
+                  propertyForm.get('squareFootage')?.invalid &&
+                  propertyForm.get('squareFootage')?.touched
+                "
+                class="text-danger"
+              >
+                {{ "add_property.FORM.SQUARE_FOOTAGE_ERROR" | translate }}
+              </small>
+            </div>
+          </div>
+
+          <!-- City and Address -->
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="city">{{
+                "add_property.FORM.CITY_LABEL" | translate
+              }}</label>
+              <input
+                type="text"
+                id="city"
+                formControlName="city"
+                class="form-control"
+                [placeholder]="'add_property.FORM.CITY_PLACEHOLDER' | translate"
+              />
+              <small
+                *ngIf="
+                  propertyForm.get('city')?.invalid &&
+                  propertyForm.get('city')?.touched
+                "
+                class="text-danger"
+              >
+                {{ "add_property.FORM.CITY_ERROR" | translate }}
+              </small>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="address">{{
+                "add_property.FORM.ADDRESS_LABEL" | translate
+              }}</label>
+              <input
+                type="text"
+                id="address"
+                formControlName="address"
+                class="form-control"
+                [placeholder]="
+                  'add_property.FORM.ADDRESS_PLACEHOLDER' | translate
+                "
+              />
+              <small
+                *ngIf="
+                  propertyForm.get('address')?.invalid &&
+                  propertyForm.get('address')?.touched
+                "
+                class="text-danger"
+              >
+                {{ "add_property.FORM.ADDRESS_ERROR" | translate }}
+              </small>
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div class="form-group">
+            <label for="phone">{{
+              "add_property.FORM.PHONE_LABEL" | translate
+            }}</label>
+            <input
+              type="tel"
+              id="phone"
+              formControlName="phone"
+              class="form-control"
+              [placeholder]="'add_property.FORM.PHONE_PLACEHOLDER' | translate"
+            />
+            <small
+              *ngIf="
+                propertyForm.get('phone')?.invalid &&
+                propertyForm.get('phone')?.touched
+              "
+              class="text-danger"
+            >
+              {{ "add_property.FORM.PHONE_ERROR" | translate }}
+            </small>
+          </div>
+
+          <!-- Image Upload -->
+          <div class="form-group">
+            <label for="imgs">{{
+              "add_property.FORM.UPLOAD_LABEL" | translate
+            }}</label>
+            <input
+              type="file"
+              id="imgs"
+              class="form-control-file"
+              (change)="onFileChange($event)"
+              multiple
+              accept="image/*"
+            />
+            <small class="text-muted" style="margin-left: 4px">
+              {{ "add_property.FORM.UPLOAD_NOTE" | translate }}
+            </small>
+            <ul *ngIf="fileErrors.length" class="text-danger">
+              <li *ngFor="let error of fileErrors">{{ error }}</li>
+            </ul>
+          </div>
+        </form>
+      </div>
+
+      <!-- Preview Section -->
+      <div class="col-lg-5 col-md-12 preview-section">
+        <h2 style="font-size: 1.5rem">
+          {{ "add_property.FORM.PREVIEW_TITLE" | translate }}
+        </h2>
+        <div class="preview-box p-3 border rounded">
+          <p>
+            <strong
+              >{{ "add_property.FORM.PREVIEW.TITLE" | translate }}:</strong
+            >
+            {{ propertyForm.value.title }}
+          </p>
+          <p>
+            <strong
+              >{{
+                "add_property.FORM.PREVIEW.DESCRIPTION" | translate
+              }}:</strong
+            >
+            {{ propertyForm.value.description }}
+          </p>
+          <p>
+            <strong>{{ "add_property.FORM.PREVIEW.TYPE" | translate }}:</strong>
+            {{ propertyForm.value.type }}
+          </p>
+          <p>
+            <strong
+              >{{ "add_property.FORM.PREVIEW.PRICE" | translate }}:</strong
+            >
+            EGP{{ propertyForm.value.price }}
+          </p>
+          <p>
+            <strong
+              >{{
+                "add_property.FORM.PREVIEW.SQUARE_FOOTAGE" | translate
+              }}:</strong
+            >
+            {{ propertyForm.value.squareFootage }} sqm
+          </p>
+          <p>
+            <strong
+              >{{ "add_property.FORM.PREVIEW.ADDRESS" | translate }}:</strong
+            >
+            {{ propertyForm.value.address }}
+          </p>
+          <p>
+            <strong>{{ "add_property.FORM.PREVIEW.CITY" | translate }}:</strong>
+            {{ propertyForm.value.city }}
+          </p>
+          <p>
+            <strong
+              >{{ "add_property.FORM.PREVIEW.PHONE" | translate }}:</strong
+            >
+            {{ propertyForm.value.phone }}
+          </p>
+        </div>
+
+        <!-- Policies -->
+        <div [formGroup]="propertyForm" class="form-group mt-4">
+          <div class="form-check">
+            <input
+              type="checkbox"
+              id="confirmPolicies"
+              formControlName="confirmPolicies"
+              class="form-check-input"
+            />
+            <label for="confirmPolicies" class="form-check-label">
+              {{ "add_property.FORM.POLICIES_LABEL" | translate }}
+            </label>
+          </div>
+          <small
+            *ngIf="
+              propertyForm.get('confirmPolicies')?.invalid &&
+              propertyForm.get('confirmPolicies')?.touched
+            "
+            class="text-danger"
+          >
+            {{ "add_property.FORM.POLICIES_ERROR" | translate }}
+          </small>
+        </div>
+
+        <!-- Submit Button -->
+        <button
+          type="submit"
+          class="btn btn-primary btn-block"
+          [disabled]="
+            propertyForm.invalid ||
+            fileErrors.length > 0 ||
+            selectedFiles.length === 0
+          "
+          (click)="onSubmit()"
+        >
+          {{ "add_property.FORM.SUBMIT_BUTTON" | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

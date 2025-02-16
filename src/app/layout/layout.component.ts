@@ -3,6 +3,7 @@ import { NavigationEnd, Router } from '@angular/router';
 import { faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 import { CartComponent } from '../cart/cart.component';
+import { LanguageService } from '../services/languages.service';
 
 @Component({
   selector: 'app-layout',
@@ -19,19 +20,28 @@ export class LayoutComponent implements OnInit {
   faInstagram = faInstagram;
   faWhatsapp = faWhatsapp;
   currentYear = new Date().getFullYear();
+  currentLang: string = 'en';
 
   constructor(
     private router: Router,
     public cartComponent: CartComponent,
-    private elRef: ElementRef
+    private elRef: ElementRef,
+    private languageService: LanguageService
   ) {}
 
+  onLanguageChange(lang: string): void {
+    this.languageService.changeLanguage(lang);
+    console.log(`Language changed to: ${lang}`);
+  }
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.isHomePage =
           this.router.url === '/home' || this.router.url === '/';
       }
+    });
+    this.languageService.currentLanguage$.subscribe((lang) => {
+      this.currentLang = lang;
     });
   }
   @HostListener('window:scroll', [])

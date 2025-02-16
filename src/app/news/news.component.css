@@ -1,0 +1,164 @@
+/* General Layout */
+.news-page {
+  padding: 135px 20px 20px;
+}
+
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.search-bar button {
+  padding: 8px 16px;
+  background-color: #142534;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #1d3347;
+}
+
+/* Page Content */
+.page-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.business-news,
+.egypt-news {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+  height: auto;
+}
+
+.top-headlines {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: system-ui;
+  margin-bottom: 20px;
+}
+
+/* Grid Layouts */
+.top-headlines.grid,
+.bbc-headlines.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.article-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.article-card:hover {
+  transform: scale(1.02);
+}
+
+.article-card img {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.article-card h3,
+.article-card h4 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.article-card p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.business-news h4,
+.egypt-news h4 {
+  font-size: 16px;
+}
+.egypt-news .article-card {
+  direction: rtl;
+  text-align: right;
+}
+.article-card a {
+  color: #47657e;
+  text-decoration: none;
+}
+
+.article-card a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .page-content {
+    flex-direction: column;
+  }
+  .business-news,
+  .egypt-news {
+    position: static;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .search-bar button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .article-card {
+    padding: 12px;
+  }
+  .business-news,
+  .egypt-news {
+    position: static !important;
+    max-height: auto;
+  }
+
+  .top-headlines.grid,
+  .bbc-headlines.grid {
+    grid-template-columns: 1fr;
+  }
+}
+.business-news,
+.egypt-news {
+  overflow-y: auto;
+  scrollbar-width: none;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+}
+
+.business-news::-webkit-scrollbar,
+.egypt-news::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome, Safari, Opera */
+}

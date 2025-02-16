@@ -81,6 +81,11 @@
   font-weight: 200;
   font-size: 24px;
 }
+#languageDropdown {
+  background-color: inherit;
+  color: #dedede;
+  border: none;
+}
 
 /* Footer Styling */
 footer {

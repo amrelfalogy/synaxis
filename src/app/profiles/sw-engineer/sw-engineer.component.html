@@ -1,0 +1,268 @@
+<!-- Hero Section -->
+<div class="row">
+  <div class="col-md-12">
+    <section
+      class="header img-fluid"
+      style="background-image: url('assets/imgs/h2.jpg')"
+    >
+      <div class="overlay"></div>
+      <div class="header-content">
+        <h1>Meet Our Team</h1>
+        <h3>
+          <a routerLink="/home" style="color: inherit; text-decoration: none"
+            >Home</a
+          >
+          - <span>Our Team</span>
+        </h3>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="profile-page">
+  <div class="container d-flex">
+    <!-- Sidebar for author info and navigation links -->
+    <div class="sidenav col-md-3 d-flex flex-column align-items-center">
+      <!-- Author Image and Info -->
+      <div class="author-info">
+        <img src="assets/imgs/amrr.jpg" alt="Author" class="author-img" />
+        <h4 class="author-name">Amr Ashraf</h4>
+        <p class="author-position">Software Engineer</p>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="profiles/sw-engineer#about">About</a></li>
+        <li><a href="profiles/sw-engineer#skills">Skills</a></li>
+        <li><a href="profiles/sw-engineer#experience">Experience</a></li>
+        <li><a href="profiles/sw-engineer#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Main content sections -->
+    <div class="content-sections col-md-9">
+      <section id="about" class="content-section">
+        <div class="title">
+          <span>About me</span>
+          <h1>who am i ?</h1>
+        </div>
+        <div class="about-desc">
+          <strong>Hi, I'm Amr </strong> and Looking for utilizing my knowledge
+          and skills to the maximum level as a Software Engineer with agile
+          mindset and business oriented.
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="note">
+              <h2>
+                I am happy to know you <br />
+                that 10+ projects done sucessfully!
+              </h2>
+              <a href="profiles/sw-engineer#contact">
+                <button class="mybtn">Consult now</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- skills -->
+      <section class="skills-section" id="skills" data-section="skills">
+        <div class="container">
+          <div class="row">
+            <div class="title">
+              <span class="heading-meta">My Skills</span>
+              <h1 class="heading">Technical Skills</h1>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-md-4 text-center" *ngFor="let skill of skills">
+              <div class="skill-card p-4" [ngClass]="skill.color">
+                <div class="icon-container" [ngClass]="skill.color">
+                  <!-- <i [class]="skill.icon"></i> -->
+                  <i class="fa-solid fa-link" style="font-size: 18px"></i>
+                </div>
+                <div class="desc">
+                  <h3>{{ skill.name }}</h3>
+                  <p>{{ skill.desc }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Experience -->
+      <section class="experience-section" id="experience">
+        <div class="container">
+          <div class="row">
+            <div class="title">
+              <span class="heading-meta">Experience</span>
+              <h1 class="heading">Work Experience</h1>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-centered">
+          <article class="timeline-entry">
+            <div class="timeline-entry-inner">
+              <div class="timeline-icon color-1">
+                <i class="fa-solid fa-pen"></i>
+              </div>
+              <div class="timeline-label">
+                <h2>
+                  Software Engineer - Synaxis, North Sinai, Egypt
+                  <span>Nov. 2024 - Present</span>
+                </h2>
+                <p>
+                  Currently working on building and designing the Synaxis
+                  company website as a frontend developer. Additionally,
+                  developing software systems to optimize internal workflows and
+                  enhance the company’s digital infrastructure.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-entry">
+            <div class="timeline-entry-inner">
+              <div class="timeline-icon color-2">
+                <i class="fa-solid fa-pen"></i>
+              </div>
+              <div class="timeline-label">
+                <h2>
+                  Frontend Developer - Build Wise (Remotely), Kuwait
+                  <span>July 2024 - Nov. 2024</span>
+                </h2>
+                <p>
+                  Worked on developing and launching the Build Wise company
+                  website as a frontend developer. Continued to provide
+                  maintenance and support for the website for six months after
+                  leaving the position, ensuring stability and incorporating
+                  client feedback.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-entry">
+            <div class="timeline-entry-inner">
+              <div class="timeline-icon color-3">
+                <i class="fa-solid fa-pen"></i>
+              </div>
+              <div class="timeline-label">
+                <h2>
+                  Frontend Developer - Maids (Remotely), UAE
+                  <span>June 2024</span>
+                </h2>
+                <p>
+                  Built a dynamic user dashboard for Maids company, utilizing
+                  Angular features such as HTTP endpoints, pagination, state
+                  management, directives, observables, and animations. Delivered
+                  the project as a mini online initiative.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-entry">
+            <div class="timeline-entry-inner">
+              <div class="timeline-icon color-4">
+                <i class="fa-solid fa-pen"></i>
+              </div>
+              <div class="timeline-label">
+                <h2>
+                  Full Stack Developer - Kawkaba Fragrances, North Sinai, Egypt
+                  <span>March 2024 - June 2024</span>
+                </h2>
+                <p>
+                  Developed an e-commerce platform for Kawkaba Fragrances,
+                  integrating the iPerfume System—an AI-powered personalized
+                  fragrance recommendation system with a web application.
+                  Handled both frontend and backend development, ensuring a
+                  seamless shopping experience for customers.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-entry">
+            <div class="timeline-entry-inner">
+              <div class="timeline-icon color-5">
+                <i class="fa-solid fa-pen"></i>
+              </div>
+              <div class="timeline-label">
+                <h2>
+                  Frontend Developer - Absher KSA (Remotely)
+                  <span>Feb. 2022 - March 2023</span>
+                </h2>
+                <p>
+                  Collaborated on building a comprehensive website for SMASCO
+                  and a landing page for Dalla Driving School using Angular.
+                  Focused on creating user-friendly interfaces and maintaining
+                  code efficiency throughout the project lifecycle.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-entry begin">
+            <div class="timeline-entry-inner">
+              <div class="timeline-icon color-none"></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="content-section">
+        <div class="container">
+          <div class="row">
+            <div class="title">
+              <span class="heading-meta">get in touch</span>
+              <h1 class="heading">contact me</h1>
+            </div>
+          </div>
+        </div>
+        <div class="contact-section">
+          <div class="row contact-details">
+            <div class="col-md-5 contact-icons">
+              <div class="contact-desc">
+                <div class="icon-container">
+                  <span class="material-symbols-outlined"> phone </span>
+                </div>
+                <div class="contact-text">
+                  <a href="https://wa.me/01016852128"> +20 101-685-2128</a>
+                </div>
+              </div>
+              <div class="contact-desc">
+                <div class="icon-container">
+                  <span class="material-symbols-outlined"> email </span>
+                </div>
+                <div class="contact-text">
+                  <a href="mailto:amrelfalogy@gmail.com"
+                    >amrelfalogy&#64;gmail.com</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 contact-icons">
+              <div class="contact-desc">
+                <div class="icon-container">
+                  <fa-icon [icon]="faWhatsapp" class="whatsapp-icon"></fa-icon>
+                </div>
+                <div class="contact-text">
+                  <a href="https://wa.me/01016852128"> +20 101-685-2128</a>
+                </div>
+              </div>
+              <div class="contact-desc">
+                <div class="icon-container">
+                  <fa-icon [icon]="faFacebook" class="facebook-icon"></fa-icon>
+                </div>
+                <div class="contact-text">
+                  <a href="mailto:synaxiscompany@gmail.com">Amr Ashraf </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

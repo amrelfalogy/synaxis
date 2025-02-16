@@ -1,0 +1,307 @@
+{
+  "layout": {
+    "nav": {
+      "home": "الرئيسية",
+      "about": "من نحن",
+      "services": "الخدمات",
+      "services_list": {
+        "real_estate": "الاستثمار والتطوير العقاري",
+        "exhibitions": "المعارض",
+        "events": "الفعاليات",
+        "constructions": "الإنشاءات"
+      },
+      "projects": "المشاريع",
+      "projects_list": {
+        "city_entertainment": "مدينة الترفيه من سينكسيس",
+        "events": "فعاليات سينكسيس",
+        "durable_goods": "معرض البضائع المعمرة من سينكسيس"
+      },
+      "news": "الأخبار",
+      "contact": "تواصل معنا",
+      "language": "اللغة",
+      "english": "الإنجليزية",
+      "arabic": "العربية"
+    },
+    "footer": {
+      "get_in_touch": "تواصل معنا",
+      "email": "synaxisinformation@gmail.com",
+      "phone": "01016852128",
+      "whatsapp": "+965 509 121",
+      "information": "معلومات",
+      "about_us": "من نحن",
+      "gallery": "معرض الصور",
+      "contact_info": "معلومات التواصل",
+      "support": "الدعم",
+      "faq": "الأسئلة الشائعة",
+      "help_center": "مركز المساعدة",
+      "customer_service": "خدمة العملاء",
+      "policies": "السياسات",
+      "privacy_policy": "سياسة الخصوصية",
+      "terms_conditions": "الشروط والأحكام",
+      "return_policy": "سياسة الإرجاع",
+      "copyright": "© حقوق النشر {{ year }} سينكسيس. جميع الحقوق محفوظة."
+    }
+  },
+  "home": {
+    "header": {
+      "title": "نقدم حياة فاخرة",
+      "consult_now": "استشر الآن",
+      "synaxis_intro": "نحن استثمارات سينكسيس"
+    },
+    "message": {
+      "title": "استثمارات سينكسيس",
+      "description": "نحن ملتزمون ليس فقط بتقديم منتجات وخدمات عالية الجودة، ولكن أيضًا بتجاوز التوقعات لضمان رضا العملاء التام."
+    },
+    "services_section": {
+      "title": "خدماتنا ",
+      "subtitle": "تعرف علينا",
+      "description": "نحن نقدم خدمات إنشائية مبتكرة وعالية الجودة لتعزيز التنمية الحضرية ودعم المشاريع الوطنية.",
+      "real_estate": {
+        "title": "العقارات",
+        "description": "نقدم خدمات تسويق عقاري شاملة، وحلول التشطيبات للمطورين، واستشارات هندسية."
+      },
+      "constructions": {
+        "title": "الإنشاءات",
+        "description": "من بناء المدن الحضرية إلى تطوير المناطق الصناعية الجديدة، نسعى لإنشاء بنية تحتية حديثة ومستدامة."
+      },
+      "events": {
+        "title": "الفعاليات والإعلانات",
+        "description": "متخصصون في تنظيم المعارض والمؤتمرات والحملات الترويجية لدعم نمو الأعمال والتواصل."
+      },
+      "view_all_services": "عرض جميع الخدمات"
+    },
+    "sell_property": {
+      "title": "أضف إعلانك مجانا",
+      "description1": "قم بتحميل تفاصيل عقارك وتواصل مع المشترين المحتملين.",
+      "description2": "اعرض عقارك مجانا!",
+      "add_property": "أضف إعلانك الان"
+    },
+    "properties_list": {
+      "title": "العقارات المتاحة",
+      "property_card": {
+        "title": "شقة حديثة",
+        "type_for_sale": "للبيع",
+        "type_for_rent": "للإيجار",
+        "location": "القاهرة",
+        "size": "1,200 قدم مربع",
+        "price_sale": "1250000 جنيه مصري",
+        "price_rent": "75000 جنيه مصري"
+      },
+      "see_more": "المزيد",
+      "no_properties": "لا توجد إعلانات متاحة في الوقت الحالي.",
+      "first_ad_offer": "كن أول الحاصلين على فرصة إضافة إعلانك مجانًا!"
+    }
+  },
+
+  "about": {
+    "TITLE": "معلومات عنا",
+    "BREADCRUMB": {
+      "HOME": "الرئيسية",
+      "ABOUT_US": "معلومات عنا"
+    },
+    "WHO_WE_ARE": {
+      "TITLE": "من نحن",
+      "CONTENT": "تعود جذور شركة سيناكيس والمقر الرئيسي لها إلى إمارة أبوظبي بعد نجاح المهندس محمد كمال في دول الخليج العربي من خلال إدارة المشاريع والمقاولات العامة، مما أدى إلى اكتساب الخبرة من خلال تنفيذ حوالي 60 مشروعًا داخل مصر وخارجها لمدة تزيد عن 20 عامًا. ومن هنا، تم وضع الخطط ووضع حجر الأساس لإنشاء كيان سيناكيس داخل مصر لإكمال رحلة النجاح داخل مصر وتقديم مستوى عالٍ من الخدمات."
+    },
+    "OUR_VISION": {
+      "TITLE": "رؤيتنا",
+      "CONTENT": "تطمح شركة سيناكيس إلى أن تكون رائدة الاعمال الاولي في المنطقة وعلى مستوى الشرق الأوسط، من خلال أعمال مخططة وشراكات مع كل من القطاعين الخاص والحكومي. كما تسعى إلى رفع معدل التوظيف ورفع مستوى الكفاءة والخبرة ومعايير العمل، بالإضافة إلى المساهمة مع الحكومة والقطاع الخاص. ورجال الأعمال للمضي قدمًا باستثماراتنا في جميع القطاعات وتحقيق الأرباح معًا."
+    }
+  },
+  "addProperty": {
+    "header": "أضف عقارك",
+    "form": {
+      "title": "العنوان",
+      "titlePlaceholder": "عنوان العقار",
+      "titleError": "العنوان مطلوب ويجب أن يحتوي على 5 أحرف على الأقل.",
+      "type": "النوع",
+      "typePlaceholder": "اختر النوع",
+      "typeOptions": {
+        "rent": "إيجار",
+        "sell": "بيع"
+      },
+      "typeError": "النوع مطلوب.",
+      "description": "الوصف",
+      "descriptionPlaceholder": "تفاصيل العقار",
+      "descriptionError": "الوصف مطلوب ويجب أن يحتوي على 20 حرفاً على الأقل.",
+      "propertyType": "نوع العقار",
+      "propertyTypeOptions": {
+        "apartment": "شقة",
+        "house": "بيت",
+        "villa": "فيلا",
+        "commercial": "محل تجاري",
+        "land": "أرض"
+      },
+      "propertyTypeError": "نوع العقار مطلوب.",
+      "price": "السعر (جنيه)",
+      "pricePlaceholder": "أدخل السعر",
+      "priceError": "السعر مطلوب ويجب أن يكون أكبر من 0.",
+      "squareFootage": "المساحة (متر مربع)",
+      "squareFootagePlaceholder": "أدخل المساحة",
+      "squareFootageError": "المساحة مطلوبة ويجب أن تكون أكبر من 0.",
+      "city": "المدينة",
+      "cityPlaceholder": "أدخل المدينة",
+      "cityError": "المدينة مطلوبة.",
+      "address": "العنوان",
+      "addressPlaceholder": "أدخل العنوان",
+      "addressError": "العنوان مطلوب.",
+      "phone": "رقم الهاتف",
+      "phonePlaceholder": "أدخل رقم الهاتف",
+      "phoneError": "رقم الهاتف مطلوب ويجب أن يكون بين 10-15 رقم.",
+      "images": "تحميل الصور (الحد الأقصى: 5)",
+      "imagesHint": "يجب ألا يزيد حجم كل ملف عن 2 ميجابايت.",
+      "fileErrors": "أخطاء الملفات",
+      "agree": "أوافق على سياسات وشروط استخدام المنصة.",
+      "agreeError": "يجب الموافقة على السياسات."
+    },
+    "preview": {
+      "header": "معاينة",
+      "fields": {
+        "title": "العنوان:",
+        "description": "الوصف:",
+        "type": "النوع:",
+        "price": "السعر:",
+        "squareFootage": "المساحة:",
+        "address": "العنوان:",
+        "city": "المدينة:",
+        "phone": "رقم الهاتف:"
+      },
+      "button": "إرسال العقار"
+    }
+  },
+  "CONTACT": {
+    "BREADCRUMB": {
+      "HOME": "الرئيسية",
+      "CONTACT_US": " تواصل معنا"
+    },
+    "TITLE": "تواصل معنا",
+    "DESCRIPTION": "نحن هنا لمساعدتك. تواصل معنا من خلال النموذج أو استخدم تفاصيل الاتصال أدناه. فريقنا جاهز لمساعدتك في أي استفسارات أو ملاحظات، وسنرد في أقرب وقت ممكن لتلبية احتياجاتك.",
+    "EMAIL": "البريد الإلكتروني",
+    "PHONE": "الهاتف",
+    "WHATSAPP": "واتساب",
+    "FORM_TITLE": "قيم عقارك مجانًا",
+    "FORM_SUBTITLE": "املأ الحقول أدناه، وسيتواصل معك فريقنا المختص لتقييم عقارك مجانًا.",
+    "PLACEHOLDERS": {
+      "NAME": "الاسم*",
+      "EMAIL": "البريد الإلكتروني*",
+      "MESSAGE": "الرسالة*"
+    },
+    "ERRORS": {
+      "NAME_REQUIRED": "يرجى إدخال اسمك.",
+      "NAME_MINLENGTH": "يجب أن يكون الاسم 3 أحرف على الأقل.",
+      "EMAIL_REQUIRED": "يرجى إدخال عنوان البريد الإلكتروني.",
+      "EMAIL_INVALID": "يرجى إدخال بريد إلكتروني صالح.",
+      "MESSAGE_REQUIRED": "يرجى إدخال رسالتك.",
+      "MESSAGE_MINLENGTH": "يجب أن تحتوي الرسالة على 10 أحرف على الأقل."
+    },
+    "SUBMIT": "إرسال"
+  },
+  "team": {
+    "header": {
+      "sub": "تعرف على",
+      "main": "فريقنا الرائع"
+    },
+    "members": [
+      {
+        "name": "المهندس محمد كمال",
+        "position": "مؤسس والرئيس التنفيذي",
+        "image": "assets/imgs/CEO.jpeg",
+        "profileLink": "/profiles/ceo"
+      },
+      {
+        "name": "مصطفى مشالي",
+        "position": "مدير المشاريع",
+        "image": "assets/imgs/ProjectsManager.jpeg",
+        "profileLink": "/profiles/projects-manager"
+      },
+      {
+        "name": "محمد شرّاب",
+        "position": "مدير فرع (شمال سيناء)",
+        "image": "assets/imgs/branchManager.jpeg",
+        "profileLink": ""
+      },
+      {
+        "name": "عمرو أشرف",
+        "position": "مهندس برمجيات",
+        "image": "assets/imgs/amrr.jpg",
+        "profileLink": "/profiles/sw-engineer"
+      }
+    ]
+  },
+
+  "add_property": {
+    "TITLE": "أضف عقارك",
+    "BREADCRUMB": {
+      "HOME": "الرئيسية",
+      "CONTACT": "اتصل بنا"
+    },
+    "FORM": {
+      "TITLE_LABEL": "العنوان",
+      "TITLE_PLACEHOLDER": "عنوان العقار",
+      "TITLE_ERROR": "العنوان مطلوب ويجب أن يكون على الأقل 5 أحرف.",
+
+      "TYPE_LABEL": "النوع",
+      "TYPE_PLACEHOLDER": "اختر النوع",
+      "TYPE_OPTIONS": {
+        "RENT": "إيجار",
+        "BUY": "بيع"
+      },
+      "TYPE_ERROR": "النوع مطلوب.",
+
+      "DESCRIPTION_LABEL": "الوصف",
+      "DESCRIPTION_PLACEHOLDER": "تفاصيل العقار",
+      "DESCRIPTION_ERROR": "الوصف مطلوب ويجب أن يكون طوله على الأقل 20 حرفًا.",
+
+      "PROPERTY_TYPE_LABEL": "نوع العقار",
+      "PROPERTY_TYPE_PLACEHOLDER": "اختر النوع",
+      "PROPERTY_TYPE_OPTIONS": {
+        "APARTMENT": "شقة",
+        "HOUSE": "منزل",
+        "VILLA": "فيلا",
+        "COMMERCIAL": "محل تجاري",
+        "LAND": "أرض"
+      },
+      "PROPERTY_TYPE_ERROR": "نوع العقار مطلوب.",
+
+      "PRICE_LABEL": "السعر (ج.م)",
+      "PRICE_PLACEHOLDER": "أدخل السعر",
+      "PRICE_ERROR": "السعر مطلوب ويجب أن يكون أكبر من 0.",
+
+      "SQUARE_FOOTAGE_LABEL": "المساحة (م²)",
+      "SQUARE_FOOTAGE_PLACEHOLDER": "أدخل المساحة",
+      "SQUARE_FOOTAGE_ERROR": "المساحة مطلوبة ويجب أن تكون أكبر من 0.",
+
+      "CITY_LABEL": "المدينة",
+      "CITY_PLACEHOLDER": "أدخل اسم المدينة",
+      "CITY_ERROR": "اسم المدينة مطلوب.",
+
+      "ADDRESS_LABEL": "العنوان",
+      "ADDRESS_PLACEHOLDER": "أدخل العنوان",
+      "ADDRESS_ERROR": "العنوان مطلوب.",
+
+      "PHONE_LABEL": "رقم الهاتف",
+      "PHONE_PLACEHOLDER": "أدخل رقم الهاتف",
+      "PHONE_ERROR": "رقم الهاتف مطلوب ويجب أن يكون بين 10 إلى 15 رقمًا.",
+
+      "UPLOAD_LABEL": "تحميل الصور (بحد أقصى: 5)",
+      "UPLOAD_NOTE": "يجب ألا يتجاوز حجم كل ملف 2 ميجابايت.",
+
+      "PREVIEW_TITLE": "المعاينة",
+      "PREVIEW": {
+        "TITLE": "العنوان",
+        "DESCRIPTION": "الوصف",
+        "TYPE": "النوع",
+        "PRICE": "السعر",
+        "SQUARE_FOOTAGE": "المساحة",
+        "ADDRESS": "العنوان",
+        "CITY": "المدينة",
+        "PHONE": "رقم الهاتف"
+      },
+
+      "POLICIES_LABEL": "أوافق على سياسات المنصة وشروط الاستخدام.",
+      "POLICIES_ERROR": "يجب الموافقة على السياسات.",
+
+      "SUBMIT_BUTTON": "إرسال العقار"
+    }
+  }
+}
