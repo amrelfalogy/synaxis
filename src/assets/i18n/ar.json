@@ -24,7 +24,7 @@
     },
     "footer": {
       "get_in_touch": "تواصل معنا",
-      "email": "synaxisinformation@gmail.com",
+      "email": "info@synaxise.com",
       "phone": "01016852128",
       "whatsapp": "+965 509 121",
       "information": "معلومات",
@@ -230,6 +230,7 @@
   },
 
   "add_property": {
+    "hero-title": "تفاصيل العقار",
     "TITLE": "أضف عقارك",
     "BREADCRUMB": {
       "HOME": "الرئيسية",

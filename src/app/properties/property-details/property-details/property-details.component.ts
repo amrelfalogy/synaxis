@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { PropertyService } from '../../../services/property.service';
 import { Clipboard } from '@angular/cdk/clipboard';
 
+declare var bootstrap: any; // Import Bootstrap for modal handling
+
 @Component({
   selector: 'app-property-details',
   templateUrl: './property-details.component.html',
@@ -13,7 +15,10 @@ export class PropertyDetailsComponent implements OnInit {
   mainImage: string = '';
   galleryImages: string[] = [];
   shareUrl: string = '';
+  encodedShareUrl: string = '';
   showShareOptions: boolean = false;
+  linkCopied = false;
+  currentImageIndex: number = 0;
 
   constructor(
     private route: ActivatedRoute,
@@ -21,27 +26,24 @@ export class PropertyDetailsComponent implements OnInit {
     private clipboard: Clipboard
   ) {}
 
+  toggleShareOptions() {
+    this.showShareOptions = !this.showShareOptions;
+  }
+
   ngOnInit(): void {
     const propertyId = this.route.snapshot.paramMap.get('id');
     if (propertyId) {
       this.fetchProperty(propertyId);
     }
+
     this.shareUrl =
       window.location.origin + '/properties/details/' + propertyId;
-  }
-
-  toggleShareOptions() {
-    this.showShareOptions = !this.showShareOptions;
-  }
-  copyLink() {
-    this.clipboard.copy(this.shareUrl);
-    alert('Link copied to clipboard!');
+    this.encodedShareUrl = encodeURIComponent(this.shareUrl);
   }
 
   fetchProperty(id: string): void {
     this.propertyService.getPropertyById(id).subscribe({
       next: (property) => {
-        console.log('Fetched Property:', property); // Debugging
         this.property = property;
 
         if (property?.images?.length > 0) {
@@ -53,5 +55,16 @@ export class PropertyDetailsComponent implements OnInit {
         console.error('Error fetching property details:', err);
       },
     });
+  }
+
+  swapMainImage(index: number): void {
+    const temp = this.mainImage;
+    this.mainImage = this.galleryImages[index];
+    this.galleryImages[index] = temp;
+  }
+
+  copyLink(): void {
+    this.clipboard.copy(this.shareUrl);
+    alert('Link copied to clipboard!');
   }
 }

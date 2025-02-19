@@ -24,7 +24,7 @@
     },
     "footer": {
       "get_in_touch": "Get in Touch",
-      "email": "synaxisinformation@gmail.com",
+      "email": "info@synaxise.com",
       "phone": "01016852128",
       "whatsapp": "+965 509 121",
       "information": "Information",
@@ -309,6 +309,7 @@
     }
   },
   "PROPERTY_DETAILS": {
+    "hero-title": "Property details",
     "TITLE": "Smart Village",
     "PRICE": "Price",
     "TYPE": "Type",
