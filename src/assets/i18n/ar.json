@@ -29,7 +29,7 @@
       "whatsapp": "+965 509 121",
       "information": "معلومات",
       "about_us": "من نحن",
-      "gallery": "معرض الصور",
+      "news": "الأخبار",
       "contact_info": "معلومات التواصل",
       "support": "الدعم",
       "faq": "الأسئلة الشائعة",
@@ -234,7 +234,7 @@
     "TITLE": "أضف عقارك",
     "BREADCRUMB": {
       "HOME": "الرئيسية",
-      "CONTACT": "اتصل بنا"
+      "TITLE": " اضف اعلانك مجانا"
     },
     "FORM": {
       "TITLE_LABEL": "العنوان",

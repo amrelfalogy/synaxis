@@ -131,26 +131,11 @@ footer {
   color: #ccc;
 }
 
-/* .social-media {
-  display: flex;
-  gap: 10px;
-  margin-top: 15px;
-}
-
-.social-media a {
-  font-size: 22px;
-  color: #bdbdbd;
-} */
-
 ul.footer-links {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
-/* .footer-links li {
-  margin-bottom: 10px;
-} */
 
 .footer-links li a {
   color: #bdbdbd;

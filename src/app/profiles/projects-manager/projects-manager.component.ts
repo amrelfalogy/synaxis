@@ -13,37 +13,37 @@ export class ProjectsManagerComponent {
   skills = [
     {
       name: 'AUTOCAD',
-      desc: 'lorem ipsuems stio narc mestiro karji of narrling',
+      desc: 'A powerful CAD software used for drafting, designing, and modeling architectural and engineering projects with precision.',
       icon: 'icon-autocad',
       color: 'border-autocad',
     },
     {
       name: 'SAP 2000',
-      desc: 'lorem ipsuems stio narc mestiro karji of narrling',
+      desc: 'A structural analysis and design software widely used for analyzing complex structures, including buildings and bridges.',
       icon: 'icon-sap2000',
       color: 'border-sap',
     },
     {
       name: 'REVIT',
-      desc: 'lorem ipsuems stio narc mestiro karji of narrling',
+      desc: 'Building Information Modeling (BIM) software that enables architects and engineers to design and visualize structures in 3D.',
       icon: 'icon-revit',
       color: 'border-revit',
     },
     {
       name: 'PHOTOSHOP',
-      desc: 'lorem ipsuems stio narc mestiro karji of narrling',
+      desc: 'An industry-leading software for image editing, graphic design, and digital art, offering tools for photo manipulation and design creation.',
       icon: 'icon-photoshop',
       color: 'border-photoshop',
     },
     {
       name: 'ILLUSTRATOR',
-      desc: 'lorem ipsuems stio narc mestiro karji of narrling',
+      desc: 'A vector graphics software used for creating logos, illustrations, and complex designs with precision and scalability.',
       icon: 'icon-illustrator',
       color: 'border-illustrator',
     },
     {
       name: 'EXCEL',
-      desc: 'lorem ipsuems stio narc mestiro karji of narrling',
+      desc: 'A spreadsheet application used for data analysis, financial modeling, and automation through functions, formulas, and pivot tables.',
       icon: 'icon-excel',
       color: 'border-excel',
     },

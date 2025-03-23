@@ -29,10 +29,10 @@
       <div
         class="collapse navbar-collapse"
         id="navbarNav"
-        style="justify-content: center"
+        style="justify-content: center; padding: 15px"
         appDropdown
       >
-        <ul class="navbar-nav">
+        <ul class="navbar-nav" style="width: 66%; justify-content: flex-end">
           <li class="nav-item">
             <a
               class="nav-link"
@@ -79,7 +79,7 @@
                   routerLink="coming-soon"
                   (click)="setActiveLink('coming-soon')"
                   (click)="collapseNavbar()"
-                  >{{ "layout.nav.services_list.Exhibitions" | translate }}
+                  >{{ "layout.nav.services_list.exhibitions" | translate }}
                 </a>
               </li>
               <li>
@@ -171,6 +171,7 @@
           <!-- Language Selector Dropdown -->
           <div class="dropdown" style="display: inline-block">
             <button
+              style="padding: 0"
               class="btn btn-secondary dropdown-toggle"
               type="button"
               id="languageDropdown"
@@ -247,9 +248,7 @@
             <a routerLink="about">{{ "layout.footer.about_us" | translate }}</a>
           </li>
           <li>
-            <a routerLink="coming-soon">{{
-              "layout.footer.gallery" | translate
-            }}</a>
+            <a routerLink="news">{{ "layout.footer.news" | translate }}</a>
           </li>
           <li>
             <a routerLink="contact">{{
@@ -264,19 +263,13 @@
         <h3 class="footer-title">{{ "layout.footer.support" | translate }}</h3>
         <ul class="footer-links">
           <li>
-            <a routerLink="coming-soon">{{
-              "layout.footer.faq" | translate
-            }}</a>
+            {{ "layout.footer.faq" | translate }}
           </li>
           <li>
-            <a routerLink="coming-soon">{{
-              "layout.footer.help_center" | translate
-            }}</a>
+            {{ "layout.footer.help_center" | translate }}
           </li>
           <li>
-            <a routerLink="coming-soon">{{
-              "layout.footer.customer_service" | translate
-            }}</a>
+            {{ "layout.footer.customer_service" | translate }}
           </li>
         </ul>
       </div>
@@ -286,19 +279,13 @@
         <h3 class="footer-title">{{ "layout.footer.policies" | translate }}</h3>
         <ul class="footer-links">
           <li>
-            <a routerLink="coming-soon">{{
-              "layout.footer.privacy_policy" | translate
-            }}</a>
+            {{ "layout.footer.privacy_policy" | translate }}
           </li>
           <li>
-            <a routerLink="coming-soon">{{
-              "layout.footer.terms_conditions" | translate
-            }}</a>
+            {{ "layout.footer.terms_conditions" | translate }}
           </li>
           <li>
-            <a routerLink="coming-soon">{{
-              "layout.footer.return_policy" | translate
-            }}</a>
+            {{ "layout.footer.return_policy" | translate }}
           </li>
         </ul>
       </div>

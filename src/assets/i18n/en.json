@@ -29,7 +29,7 @@
       "whatsapp": "+965 509 121",
       "information": "Information",
       "about_us": "About Us",
-      "gallery": "Gallery",
+      "news": "News",
       "contact_info": "Contact Info",
       "support": "Support",
       "faq": "FAQ",
@@ -237,7 +237,7 @@
     "TITLE": "Add Your Property",
     "BREADCRUMB": {
       "HOME": "Home",
-      "CONTACT": "Contact"
+      "TITLE": "place your add"
     },
     "FORM": {
       "TITLE_LABEL": "Title",
