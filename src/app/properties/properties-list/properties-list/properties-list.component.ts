@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PropertyService } from '../../../services/property.service';
 import { LanguageService } from 'src/app/services/languages.service';
 
@@ -14,6 +14,9 @@ export class PropertiesListComponent implements OnInit {
   isLoading: boolean = true;
   noProperties = false;
   visibleCount = 3; // Number of properties to show initially
+
+    @Output() empty = new EventEmitter<boolean>();
+
 
   constructor(
     private propertyService: PropertyService,
@@ -33,18 +36,24 @@ export class PropertiesListComponent implements OnInit {
         this.isLoading = false;
         if (properties.length === 0) {
           this.noProperties = true;
+          this.empty.emit(true);
+
         } else {
           this.properties = properties;
           this.displayedProperties = this.properties.slice(
             0,
             this.visibleCount
           );
+          this.noProperties= false;
+          this.empty.emit(false); 
+
         }
       },
       error: (error) => {
         console.error('Error fetching properties:', error);
         this.isLoading = false;
         this.noProperties = true;
+         this.empty.emit(true); 
       },
     });
   }

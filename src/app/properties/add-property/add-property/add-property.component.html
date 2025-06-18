@@ -20,12 +20,49 @@
     </div>
   </div>
 
+    <!-- Ad Type Selection -->
+  <div class="container mt-4">
+  <div class="row text-center ad-type-row">
+    <div
+      class="col-md-4 type-card"
+      [class.selected]="selectedType === 'property'"
+      (click)="selectAdType('property')"
+    >
+      <div class="card p-3 ad-type-card">
+        <i class="fa-solid fa-house-chimney ad-type-icon"></i>
+        <div class="ad-type-title">{{ "add_property.AD_TYPE.PROPERTY" | translate }}</div>
+      </div>
+    </div>
+    <div
+      class="col-md-4 type-card"
+      [class.selected]="selectedType === 'car'"
+      (click)="selectAdType('car')"
+    >
+      <div class="card p-3 ad-type-card">
+        <i class="fa-solid fa-car ad-type-icon"></i>
+        <div class="ad-type-title">{{ "add_property.AD_TYPE.CAR" | translate }}</div>
+      </div>
+    </div>
+    <div
+      class="col-md-4 type-card"
+      [class.selected]="selectedType === 'job'"
+      (click)="selectAdType('job')"
+    >
+      <div class="card p-3 ad-type-card">
+        <i class="fa-solid fa-briefcase ad-type-icon"></i>
+        <div class="ad-type-title">{{ "add_property.AD_TYPE.JOB" | translate }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+  
   <div class="container">
+    <div *ngIf="selectedType === 'property'">
     <h1 class="text-center">{{ "add_property.TITLE" | translate }}</h1>
     <div class="row">
       <!-- Form Section -->
       <div class="col-lg-7 col-md-12 form-section">
-        <form [formGroup]="propertyForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="propertyForm" (ngSubmit)="onSubmitProperty()">
           <!-- Title and Type -->
           <div class="form-row">
             <div class="form-group col-md-6">
@@ -388,11 +425,377 @@
             fileErrors.length > 0 ||
             selectedFiles.length === 0
           "
-          (click)="onSubmit()"
+          (click)="onSubmitProperty()"
         >
           {{ "add_property.FORM.SUBMIT_BUTTON" | translate }}
         </button>
       </div>
     </div>
+    </div>
+
+<!-- Cars -->
+<div *ngIf="selectedType === 'car'">
+  <h1 class="text-center">{{ "add_car.TITLE" | translate }}</h1>
+  <div class="row">
+    <!-- Form Section -->
+    <div class="col-lg-7 col-md-12 form-section">
+      <form [formGroup]="carForm" (ngSubmit)="onSubmitCar()">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="car-title">{{ "add_car.FORM.TITLE_LABEL" | translate }}</label>
+            <input
+              type="text"
+              id="car-title"
+              formControlName="title"
+              class="form-control"
+              [placeholder]="'add_car.FORM.TITLE_PLACEHOLDER' | translate"
+            />
+            <small *ngIf="carForm.get('title')?.invalid && carForm.get('title')?.touched" class="text-danger">
+              {{ "add_car.FORM.TITLE_ERROR" | translate }}
+            </small>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="car-model">{{ "add_car.FORM.MODEL_LABEL" | translate }}</label>
+            <input
+              type="text"
+              id="car-model"
+              formControlName="model"
+              class="form-control"
+              [placeholder]="'add_car.FORM.MODEL_PLACEHOLDER' | translate"
+            />
+            <small *ngIf="carForm.get('model')?.invalid && carForm.get('model')?.touched" class="text-danger">
+              {{ "add_car.FORM.MODEL_ERROR" | translate }}
+            </small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="car-year">{{ "add_car.FORM.YEAR_LABEL" | translate }}</label>
+            <input
+              type="number"
+              id="car-year"
+              formControlName="year"
+              class="form-control"
+              [placeholder]="'add_car.FORM.YEAR_PLACEHOLDER' | translate"
+            />
+            <small *ngIf="carForm.get('year')?.invalid && carForm.get('year')?.touched" class="text-danger">
+              {{ "add_car.FORM.YEAR_ERROR" | translate }}
+            </small>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="car-mileage">{{ "add_car.FORM.MILEAGE_LABEL" | translate }}</label>
+            <input
+              type="number"
+              id="car-mileage"
+              formControlName="mileage"
+              class="form-control"
+              [placeholder]="'add_car.FORM.MILEAGE_PLACEHOLDER' | translate"
+            />
+            <small *ngIf="carForm.get('mileage')?.invalid && carForm.get('mileage')?.touched" class="text-danger">
+              {{ "add_car.FORM.MILEAGE_ERROR" | translate }}
+            </small>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="car-price">{{ "add_car.FORM.PRICE_LABEL" | translate }}</label>
+            <input
+              type="number"
+              id="car-price"
+              formControlName="price"
+              class="form-control"
+              [placeholder]="'add_car.FORM.PRICE_PLACEHOLDER' | translate"
+            />
+            <small *ngIf="carForm.get('price')?.invalid && carForm.get('price')?.touched" class="text-danger">
+              {{ "add_car.FORM.PRICE_ERROR" | translate }}
+            </small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="car-city">{{ "add_car.FORM.CITY_LABEL" | translate }}</label>
+            <input
+              type="text"
+              id="car-city"
+              formControlName="city"
+              class="form-control"
+              [placeholder]="'add_car.FORM.CITY_PLACEHOLDER' | translate"
+            />
+            <small *ngIf="carForm.get('city')?.invalid && carForm.get('city')?.touched" class="text-danger">
+              {{ "add_car.FORM.CITY_ERROR" | translate }}
+            </small>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="car-phone">{{ "add_car.FORM.PHONE_LABEL" | translate }}</label>
+            <input
+              type="text"
+              id="car-phone"
+              formControlName="phone"
+              class="form-control"
+              [placeholder]="'add_car.FORM.PHONE_PLACEHOLDER' | translate"
+            />
+            <small *ngIf="carForm.get('phone')?.invalid && carForm.get('phone')?.touched" class="text-danger">
+              {{ "add_car.FORM.PHONE_ERROR" | translate }}
+            </small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="car-description">{{ "add_car.FORM.DESCRIPTION_LABEL" | translate }}</label>
+          <textarea
+            id="car-description"
+            formControlName="description"
+            class="form-control"
+            [placeholder]="'add_car.FORM.DESCRIPTION_PLACEHOLDER' | translate"
+            rows="3"
+          ></textarea>
+          <small *ngIf="carForm.get('description')?.invalid && carForm.get('description')?.touched" class="text-danger">
+            {{ "add_car.FORM.DESCRIPTION_ERROR" | translate }}
+          </small>
+        </div>
+
+        <!-- File Upload -->
+        <div class="form-group">
+          <label for="car-images">{{ "add_car.FORM.UPLOAD_LABEL" | translate }}</label>
+          <input
+            type="file"
+            id="car-images"
+            (change)="onFileChange($event)"
+            multiple
+            class="form-control-file"
+            accept="image/*"
+          />
+          <small class="text-muted">{{ "add_car.FORM.UPLOAD_NOTE" | translate }}</small>
+          <ul *ngIf="fileErrors.length" class="text-danger">
+            <li *ngFor="let error of fileErrors">{{ error }}</li>
+          </ul>
+        </div>
+      </form>
+    </div>
+
+    <!-- Preview Section -->
+    <div class="col-lg-5 col-md-12 preview-section">
+      <h2 style="font-size: 1.5rem">{{ "add_car.FORM.PREVIEW_TITLE" | translate }}</h2>
+      <div class="preview-box p-3 border rounded">
+        <p><strong>{{ "add_car.FORM.TITLE_LABEL" | translate }}:</strong> {{ carForm.value.title }}</p>
+        <p><strong>{{ "add_car.FORM.DESCRIPTION_LABEL" | translate }}:</strong> {{ carForm.value.description }}</p>
+        <p><strong>{{ "add_car.FORM.MODEL_LABEL" | translate }}:</strong> {{ carForm.value.model }}</p>
+        <p><strong>{{ "add_car.FORM.YEAR_LABEL" | translate }}:</strong> {{ carForm.value.year }}</p>
+        <p><strong>{{ "add_car.FORM.MILEAGE_LABEL" | translate }}:</strong> {{ carForm.value.mileage }}</p>
+        <p><strong>{{ "add_car.FORM.PRICE_LABEL" | translate }}:</strong> {{ carForm.value.price }}</p>
+        <p><strong>{{ "add_car.FORM.CITY_LABEL" | translate }}:</strong> {{ carForm.value.city }}</p>
+        <p><strong>{{ "add_car.FORM.PHONE_LABEL" | translate }}:</strong> {{ carForm.value.phone }}</p>
+      </div>
+     <!-- Policies -->
+        <div [formGroup]="carForm" class="form-group mt-4">
+          <div class="form-check">
+            <input
+              type="checkbox"
+              id="confirmPolicies"
+              formControlName="confirmPolicies"
+              class="form-check-input"
+            />
+            <label for="confirmPolicies" class="form-check-label">
+              {{ "add_property.FORM.POLICIES_LABEL" | translate }}
+            </label>
+          </div>
+          <small
+            *ngIf="
+              carForm.get('confirmPolicies')?.invalid &&
+              carForm.get('confirmPolicies')?.touched
+            "
+            class="text-danger"
+          >
+            {{ "add_property.FORM.POLICIES_ERROR" | translate }}
+          </small>
+        </div>
+
+        <!-- Submit Button -->
+        <button
+          type="submit"
+          class="btn btn-primary btn-block"
+          [disabled]="
+            carForm.invalid ||
+            fileErrors.length > 0 ||
+            selectedFiles.length === 0
+          "
+          (click)="onSubmitCar()"
+        >
+          {{ "add_property.FORM.SUBMIT_BUTTON" | translate }}
+        </button>
+    </div>
   </div>
 </div>
+
+<!-- Jobs -->
+<div *ngIf="selectedType === 'job'">
+  <h1 class="text-center">{{ "add_job.TITLE" | translate }}</h1>
+  <div class="row">
+    <!-- Form Section -->
+    <div class="col-lg-7 col-md-12 form-section">
+      <form [formGroup]="jobForm" (ngSubmit)="onSubmitJob()">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="job-title">{{ "add_job.FORM.TITLE_LABEL" | translate }}</label>
+            <input
+              type="text"
+              id="job-title"
+              formControlName="title"
+              class="form-control"
+              [placeholder]="'add_job.FORM.TITLE_PLACEHOLDER' | translate"
+            />
+            <small *ngIf="jobForm.get('title')?.invalid && jobForm.get('title')?.touched" class="text-danger">
+              {{ "add_job.FORM.TITLE_ERROR" | translate }}
+            </small>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="job-industry">{{ "add_job.FORM.INDUSTRY_LABEL" | translate }}</label>
+            <input
+              type="text"
+              id="job-industry"
+              formControlName="industry"
+              class="form-control"
+              [placeholder]="'add_job.FORM.INDUSTRY_PLACEHOLDER' | translate"
+            />
+            <small *ngIf="jobForm.get('industry')?.invalid && jobForm.get('industry')?.touched" class="text-danger">
+              {{ "add_job.FORM.INDUSTRY_ERROR" | translate }}
+            </small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="job-salary">{{ "add_job.FORM.SALARY_LABEL" | translate }}</label>
+            <input
+              type="number"
+              id="job-salary"
+              formControlName="salary"
+              class="form-control"
+              [placeholder]="'add_job.FORM.SALARY_PLACEHOLDER' | translate"
+            />
+            <small *ngIf="jobForm.get('salary')?.invalid && jobForm.get('salary')?.touched" class="text-danger">
+              {{ "add_job.FORM.SALARY_ERROR" | translate }}
+            </small>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="job-yearsOfExperience">{{ "add_job.FORM.YEARS_EXPERIENCE_LABEL" | translate }}</label>
+            <input
+              type="number"
+              id="job-yearsOfExperience"
+              formControlName="yearsOfExperience"
+              class="form-control"
+              [placeholder]="'add_job.FORM.YEARS_EXPERIENCE_PLACEHOLDER' | translate"
+            />
+            <small *ngIf="jobForm.get('yearsOfExperience')?.invalid && jobForm.get('yearsOfExperience')?.touched" class="text-danger">
+              {{ "add_job.FORM.YEARS_EXPERIENCE_ERROR" | translate }}
+            </small>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="job-jobType">{{ "add_job.FORM.JOB_TYPE_LABEL" | translate }}</label>
+            <select
+              id="job-jobType"
+              formControlName="jobType"
+              class="form-control"
+            >
+              <option value="" disabled selected>{{ "add_job.FORM.JOB_TYPE_PLACEHOLDER" | translate }}</option>
+              <option value="Full-Time">Full-Time</option>
+              <option value="Part-Time">Part-Time</option>
+            </select>
+            <small *ngIf="jobForm.get('jobType')?.invalid && jobForm.get('jobType')?.touched" class="text-danger">
+              {{ "add_job.FORM.JOB_TYPE_ERROR" | translate }}
+            </small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="job-city">{{ "add_job.FORM.CITY_LABEL" | translate }}</label>
+            <input
+              type="text"
+              id="job-city"
+              formControlName="city"
+              class="form-control"
+              [placeholder]="'add_job.FORM.CITY_PLACEHOLDER' | translate"
+            />
+            <small *ngIf="jobForm.get('city')?.invalid && jobForm.get('city')?.touched" class="text-danger">
+              {{ "add_job.FORM.CITY_ERROR" | translate }}
+            </small>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="job-phone">{{ "add_job.FORM.PHONE_LABEL" | translate }}</label>
+            <input
+              type="text"
+              id="job-phone"
+              formControlName="phone"
+              class="form-control"
+              [placeholder]="'add_job.FORM.PHONE_PLACEHOLDER' | translate"
+            />
+            <small *ngIf="jobForm.get('phone')?.invalid && jobForm.get('phone')?.touched" class="text-danger">
+              {{ "add_job.FORM.PHONE_ERROR" | translate }}
+            </small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="job-description">{{ "add_job.FORM.DESCRIPTION_LABEL" | translate }}</label>
+          <textarea
+            id="job-description"
+            formControlName="description"
+            class="form-control"
+            [placeholder]="'add_job.FORM.DESCRIPTION_PLACEHOLDER' | translate"
+            rows="3"
+          ></textarea>
+          <small *ngIf="jobForm.get('description')?.invalid && jobForm.get('description')?.touched" class="text-danger">
+            {{ "add_job.FORM.DESCRIPTION_ERROR" | translate }}
+          </small>
+        </div>
+      </form>
+    </div>
+
+    <!-- Preview Section -->
+    <div class="col-lg-5 col-md-12 preview-section">
+      <h2 style="font-size: 1.5rem">{{ "add_job.FORM.PREVIEW_TITLE" | translate }}</h2>
+      <div class="preview-box p-3 border rounded">
+        <p><strong>{{ "add_job.FORM.TITLE_LABEL" | translate }}:</strong> {{ jobForm.value.title }}</p>
+        <p><strong>{{ "add_job.FORM.DESCRIPTION_LABEL" | translate }}:</strong> {{ jobForm.value.description }}</p>
+        <p><strong>{{ "add_job.FORM.INDUSTRY_LABEL" | translate }}:</strong> {{ jobForm.value.industry }}</p>
+        <p><strong>{{ "add_job.FORM.SALARY_LABEL" | translate }}:</strong> {{ jobForm.value.salary }}</p>
+        <p><strong>{{ "add_job.FORM.YEARS_EXPERIENCE_LABEL" | translate }}:</strong> {{ jobForm.value.yearsOfExperience }}</p>
+        <p><strong>{{ "add_job.FORM.JOB_TYPE_LABEL" | translate }}:</strong> {{ jobForm.value.jobType }}</p>
+        <p><strong>{{ "add_job.FORM.CITY_LABEL" | translate }}:</strong> {{ jobForm.value.city }}</p>
+        <p><strong>{{ "add_job.FORM.PHONE_LABEL" | translate }}:</strong> {{ jobForm.value.phone }}</p>
+      </div>
+      <!-- Policies (optional, if you want to keep it like property) -->
+      <div [formGroup]="jobForm" class="form-group mt-4">
+        <div class="form-check" [ngClass]="{'rtl-check': isArabic}">
+  <input
+    type="checkbox"
+    id="confirmPolicies"
+    formControlName="confirmPolicies"
+    class="form-check-input"
+  />
+  <label for="confirmPolicies" class="form-check-label">
+    {{ "add_property.FORM.POLICIES_LABEL" | translate }}
+  </label>
+</div>
+        <small
+          *ngIf="jobForm.get('confirmPolicies')?.invalid && jobForm.get('confirmPolicies')?.touched"
+          class="text-danger"
+        >
+          {{ "add_property.FORM.POLICIES_ERROR" | translate }}
+        </small>
+      </div>
+      <!-- Submit -->
+      <button
+        type="submit"
+        class="btn btn-primary btn-block mt-4"
+        [disabled]="jobForm.invalid || isLoading"
+        (click)="onSubmitJob()"
+      >
+        {{ isLoading ? ('add_job.FORM.SUBMIT_BUTTON' | translate) : ('add_job.FORM.SUBMIT_BUTTON' | translate) }}
+      </button>
+    </div>
+  </div>
+</div>
+
+  </div>

@@ -4,7 +4,7 @@
     [ngClass]="{
       'navbar-light': !isAtTop,
       'navbar-hidden': !isNavbarVisible,
-      'navbar-transparent': isAtTop && !isNavbarCollapsed,
+      'navbar-transparent': isAtTop && !isNavbarCollapsed && !isAtNewsPage,
       'navbar-collapsed-bg': isNavbarCollapsed
     }"
   >
@@ -221,17 +221,17 @@
           </div>
           <div class="contact-item">
             <span class="material-symbols-outlined">call</span>
-            <span style="font-size: 16px">{{
+            <a href="tel:+201094969418" style="font-size: 16px">{{
               "layout.footer.phone" | translate
-            }}</span>
+            }}</a>
           </div>
           <a
             style="text-decoration: none; color: inherit"
             class="contact-item"
-            href="https://wa.me/01016852128"
+            href="https://wa.me/201090160332"
           >
             <fa-icon [icon]="faWhatsapp" class="whatsapp-icon"></fa-icon>
-            <a href="https://wa.me/01016852128">{{
+            <a href="https://wa.me/201090160332">{{
               "layout.footer.whatsapp" | translate
             }}</a>
           </a>

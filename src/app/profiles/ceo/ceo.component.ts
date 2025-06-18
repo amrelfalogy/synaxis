@@ -7,8 +7,21 @@ import { faWhatsapp, faFacebook } from '@fortawesome/free-brands-svg-icons';
   styleUrls: ['./ceo.component.css'],
 })
 export class CeoComponent {
+  profile: any;
   faWhatsapp = faWhatsapp;
   faFacebook = faFacebook;
+
+  isArabicText(text: string): boolean {
+  const arabicRegex = /[\u0600-\u06FF]/;
+  return arabicRegex.test(text);
+}
+
+getCardDirection(profile: any): 'rtl' | 'ltr' {
+  const titleIsArabic = this.isArabicText(profile.title || '');
+  const descriptionIsArabic = this.isArabicText(profile.description || '');
+  return titleIsArabic || descriptionIsArabic ? 'rtl' : 'ltr';
+}
+
 
   skills = [
     {

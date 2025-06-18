@@ -18,6 +18,15 @@ export class HomeComponent {
   faFacebook = faFacebook;
   faTwitter = faTwitter;
   isArabic: boolean = false;
+  
+
+  noProperties = false;
+  noCars = false;
+  noJobs = false;
+
+get allEmpty(): boolean {
+  return this.noProperties && this.noCars && this.noJobs;
+}
 
   constructor(private languageService: LanguageService) {}
 
@@ -25,17 +34,23 @@ export class HomeComponent {
     this.languageService.currentLanguage$.subscribe((lang) => {
       this.isArabic = lang === 'ar';
     });
+    this.revealSections(); // Reveal sections on initial load
+    setTimeout(() => {
+      
+      this.revealSections(); // Show after ready
+    }, 500);
   }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    const sections = document.querySelectorAll('.section');
+    this.revealSections(); // Reveal sections on scroll
+  }
 
+  private revealSections() {
+    const sections = document.querySelectorAll('.section');
     sections.forEach((section) => {
       const sectionTop = section.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
-
-      // If the section is in view, add the 'visible' class
       if (sectionTop < windowHeight - 100) {
         section.classList.add('visible');
       }

@@ -58,7 +58,6 @@
   font-weight: 300;
   color: #242424e0;
   text-align: center;
-  text-transform: uppercase;
   margin-top: 10px;
 }
 
@@ -124,6 +123,7 @@
   font-size: 1.2rem;
   text-transform: capitalize;
   color: #0e0e0e;
+  max-width: 85%;
 }
 
 .property-type {

@@ -25,8 +25,8 @@
     "footer": {
       "get_in_touch": "Get in Touch",
       "email": "info@synaxise.com",
-      "phone": "01016852128",
-      "whatsapp": "+965 509 121",
+      "phone": "+201 094 969 418",
+      "whatsapp": "+201 090 160 332",
       "information": "Information",
       "about_us": "About Us",
       "news": "News",
@@ -79,19 +79,26 @@
     },
     "properties_list": {
       "title": "Available Properties",
-      "property_card": {
-        "title": "Modern Apartment",
-        "type_for_sale": "For Sale",
-        "type_for_rent": "For Rent",
-        "location": "Cairo",
-        "size": "1,200 sq.ft",
-        "price_sale": "1250000 EGP",
-        "price_rent": "75000 EGP"
-      },
       "see_more": "See more",
       "no_properties": "No properties available!",
       "first_ad_offer": "Be the first to get the opportunity to add your ad for free!"
-    }
+    },
+    "cars_list": {
+      "title": "Available Cars",
+      "see_more": "See more",
+      "no_cars": "No Cars available!",
+      "first_ad_offer": "Be the first to get the opportunity to add your ad for free!"
+    },
+    "jobs_list": {
+      "title": "Available jobs",
+      "see_more": "See more",
+      "no_jobs": "No Jobs available!",
+      "first_ad_offer": "Be the first to get the opportunity to add your ad for free!"
+    },
+    "no_adds": {
+      "title": "No ads available!",
+      "description": "Be the first to get the opportunity to add your ad for free!"
+      }
   },
 
   "about": {
@@ -110,68 +117,7 @@
     }
   },
 
-  "addProperty": {
-    "header": "Add Your Property",
-    "form": {
-      "title": "Title",
-      "titlePlaceholder": "Property title",
-      "titleError": "Title is required and must be at least 5 characters.",
-      "type": "Type",
-      "typePlaceholder": "Choose type",
-      "typeOptions": {
-        "rent": "Rent",
-        "sell": "Sell"
-      },
-      "typeError": "Type is required.",
-      "description": "Description",
-      "descriptionPlaceholder": "Property details",
-      "descriptionError": "Description is required and must be at least 20 characters long.",
-      "propertyType": "Property Type",
-      "propertyTypeOptions": {
-        "apartment": "Apartment",
-        "house": "House",
-        "villa": "Villa",
-        "commercial": "Commercial Shop",
-        "land": "Land"
-      },
-      "propertyTypeError": "Property type is required.",
-      "price": "Price (EGP)",
-      "pricePlaceholder": "Enter price",
-      "priceError": "Price is required and must be greater than 0.",
-      "squareFootage": "Square Footage (sqm)",
-      "squareFootagePlaceholder": "Enter square footage",
-      "squareFootageError": "Square footage is required and must be greater than 0.",
-      "city": "City",
-      "cityPlaceholder": "Enter city",
-      "cityError": "City is required.",
-      "address": "Address",
-      "addressPlaceholder": "Enter address",
-      "addressError": "Address is required.",
-      "phone": "Phone Number",
-      "phonePlaceholder": "Enter phone number",
-      "phoneError": "Phone number is required and must be between 10-15 digits.",
-      "uploadImages": "Upload Images (Max: 5)",
-      "uploadImagesNote": "Each file should not exceed 2MB.",
-      "fileErrors": {
-        "fileSize": "File size should not exceed 2MB.",
-        "fileCount": "You can upload up to 5 files only."
-      },
-      "confirmPolicies": "I agree to the platform policies and terms of use.",
-      "confirmPoliciesError": "You must agree to the policies.",
-      "submitButton": "Submit Property",
-      "previewHeader": "Preview",
-      "preview": {
-        "title": "Title",
-        "description": "Description",
-        "type": "Type",
-        "price": "Price",
-        "squareFootage": "Square Footage",
-        "address": "Address",
-        "city": "City",
-        "phone": "Phone"
-      }
-    }
-  },
+  
 
   "CONTACT": {
     "BREADCRUMB": {
@@ -239,6 +185,11 @@
       "HOME": "Home",
       "TITLE": "place your add"
     },
+  "AD_TYPE": {
+    "PROPERTY": "Property",
+    "CAR": "Car",
+    "JOB": "Job"
+  },
     "FORM": {
       "TITLE_LABEL": "Title",
       "TITLE_PLACEHOLDER": "Property title",
@@ -319,5 +270,73 @@
     "PHONE": "Phone",
     "DESCRIPTION": "Description",
     "GALLERY": "Gallery"
+  },
+   "CAR_DETAILS": {
+    "hero-title": "Car details"
+  },
+   "add_car": {
+    "TITLE": "Add Car",
+    "FORM": {
+      "TITLE_LABEL": "Title",
+      "TITLE_PLACEHOLDER": "Toyota Camry for Sale",
+      "TITLE_ERROR": "Car title is required (min 3 characters).",
+      "MODEL_LABEL": "Model",
+      "MODEL_PLACEHOLDER": "Camry",
+      "MODEL_ERROR": "Model is required.",
+      "YEAR_LABEL": "Year",
+      "YEAR_PLACEHOLDER": "2018",
+      "YEAR_ERROR": "Enter a valid year.",
+      "MILEAGE_LABEL": "Mileage (km)",
+      "MILEAGE_PLACEHOLDER": "35000",
+      "MILEAGE_ERROR": "Enter a valid mileage.",
+      "PRICE_LABEL": "Price",
+      "PRICE_PLACEHOLDER": "2100000",
+      "PRICE_ERROR": "Price is required and must be valid.",
+      "CITY_LABEL": "City",
+      "CITY_PLACEHOLDER": "Cairo",
+      "CITY_ERROR": "City is required.",
+      "PHONE_LABEL": "Phone",
+      "PHONE_PLACEHOLDER": "Enter phone number",
+      "PHONE_ERROR": "Enter a valid phone number.",
+      "DESCRIPTION_LABEL": "Description",
+      "DESCRIPTION_PLACEHOLDER": "Enter car description",
+      "DESCRIPTION_ERROR": "Description is required (min 20 characters).",
+      "UPLOAD_LABEL": "Upload Images",
+      "UPLOAD_NOTE": "You can upload up to 5 images (max 2MB each).",
+      "SUBMIT_BUTTON": "Submit Car Ad",
+      "PREVIEW_TITLE": "Preview"
+    }
+  },
+  "add_job": {
+    "TITLE": "Add Job",
+    "FORM": {
+      "TITLE_LABEL": "Title",
+      "TITLE_PLACEHOLDER": "Architecture Engineer",
+      "TITLE_ERROR": "Title is required (min 3 characters).",
+      "INDUSTRY_LABEL": "Industry",
+      "INDUSTRY_PLACEHOLDER": "Engineering",
+      "INDUSTRY_ERROR": "Industry is required.",
+      "SALARY_LABEL": "Salary",
+      "SALARY_PLACEHOLDER": "e.g. 12000",
+      "SALARY_ERROR": "Enter a valid salary.",
+      "YEARS_EXPERIENCE_LABEL": "Years of Experience",
+      "YEARS_EXPERIENCE_PLACEHOLDER": "e.g. 3",
+      "YEARS_EXPERIENCE_ERROR": "Enter a valid number.",
+      "JOB_TYPE_LABEL": "Job Type",
+      "JOB_TYPE_PLACEHOLDER": "Select job type",
+      "JOB_TYPE_ERROR": "Job type is required.",
+      "CITY_LABEL": "City",
+      "CITY_PLACEHOLDER": "",
+      "CITY_ERROR": "City is required.",
+      "PHONE_LABEL": "Phone",
+      "PHONE_PLACEHOLDER": "Enter phone number",
+      "PHONE_ERROR": "Enter a valid phone number.",
+      "DESCRIPTION_LABEL": "Description",
+      "DESCRIPTION_PLACEHOLDER": "Enter job description",
+      "DESCRIPTION_ERROR": "Description is required (min 20 characters).",
+      "SUBMIT_BUTTON": "Submit Job Ad",
+      "PREVIEW_TITLE": "Preview"
+    }
   }
+
 }

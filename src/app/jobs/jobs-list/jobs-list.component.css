@@ -1,0 +1,201 @@
+/* Properties List Section */
+.properties-list-section {
+  padding: 60px 20px;
+  background-color: #f7f9fc;
+  position: relative;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+/* Loading Spinner */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #ddd;
+  border-top: 5px solid #001f3f;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* No Properties Message */
+.no-properties {
+  margin: 100px 0 120px;
+}
+.no-properties-message {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+
+  color: #1b1b1b;
+}
+
+.highlight-message {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #242424e0;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Properties Grid */
+.properties-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.job-card {
+  display: flex;
+  justify-content: center;
+}
+.card {
+  width: 100%;
+  margin-top: 24px;
+  overflow: hidden;
+  
+  position: relative;
+  color: aliceblue;
+}
+.job-card .card {
+  align-items: center;
+  justify-content: flex-end;
+  height: 22rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Image Styling */
+.job-card img {
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  height: 180px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  z-index: 1;
+  transition: opacity 0.2s ease-out;
+}
+
+
+/* Card Content */
+.job-card .card-body {
+  background-color: white;
+  z-index: 2;
+  width: 88%;
+  border-radius: 8px;
+  position: relative;
+  
+}
+
+.job-card .card-title {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: #0e0e0e;
+}
+.job-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+}
+
+.job-card .badge {
+  font-size: 0.65rem;
+  text-transform: capitalize;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-right: 6px;
+  margin-bottom: 2px;
+  background: #eaf1fb;
+  color: #1a237e;
+  font-weight: 500;
+}
+.job-card .badge-primary {
+  background: #001f3f;
+  color: #fff;
+}
+.job-card .badge-secondary {
+  background: #e3e3e3;
+  color: #333;
+}
+
+.job-type {
+  font-size: 13px;
+  right: 10px;
+  position: absolute;
+  background-color: #001f3f;
+  color: white;
+  padding: 5px 9px;
+  border-radius: 8px;
+  font-weight: 400;
+  border: none;
+}
+
+.job-type.rtl {
+  right: auto !important;
+  left: 10px !important;
+}
+
+.job-card .card-text {
+  font-size: .92rem;
+  font-weight: 600;
+  color: #555;
+  margin: 10px 0 15px;
+  position: unset;
+  max-width: 100%;
+  transition: none;
+  opacity: 1;
+}
+
+.card-body .price {
+  color: rgb(188 0 19);
+  opacity: 1;
+  font-weight: 500;
+  position: unset;
+  max-width: 100%;
+  transition: none;
+}
+
+.see-more-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.see-more-btn {
+  background-color: #001f3f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background-color: #001b36;
+}

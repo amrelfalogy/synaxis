@@ -9,6 +9,19 @@ import { faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 export class SwEngineerComponent {
   faWhatsapp = faWhatsapp;
   faFacebook = faFacebook;
+  profile: any;
+
+  isArabicText(text: string): boolean {
+  const arabicRegex = /[\u0600-\u06FF]/;
+  return arabicRegex.test(text);
+}
+
+getCardDirection(job: any): 'rtl' | 'ltr' {
+  const titleIsArabic = this.isArabicText(job.title || '');
+  const descriptionIsArabic = this.isArabicText(job.description || '');
+  return titleIsArabic || descriptionIsArabic ? 'rtl' : 'ltr';
+}
+
 
   skills = [
     {

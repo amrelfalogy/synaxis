@@ -13,6 +13,7 @@ import { LanguageService } from '../services/languages.service';
 export class LayoutComponent implements OnInit {
   isHomePage: boolean = false;
   isAtTop: boolean = true;
+  isAtNewsPage: boolean = false;
   isNavbarVisible = true;
   isNavbarCollapsed = false;
   lastScrollTop = 0;
@@ -36,9 +37,11 @@ export class LayoutComponent implements OnInit {
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.isHomePage =
-          this.router.url === '/home' || this.router.url === '/';
-      }
+      const url = this.router.url;
+
+      this.isHomePage = url === '/home' || url === '/';
+      this.isAtNewsPage = url.includes('/news'); 
+    }
     });
     this.languageService.currentLanguage$.subscribe((lang) => {
       this.currentLang = lang;

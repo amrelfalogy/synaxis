@@ -1,0 +1,12 @@
+h1 {
+  font-size: 5rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.container {
+  height: 100vh;
+  text-align: center;
+  display: grid;
+  align-items: center;
+}

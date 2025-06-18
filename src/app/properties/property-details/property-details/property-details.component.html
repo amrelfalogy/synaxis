@@ -1,3 +1,4 @@
+<div class="property-details">
 <!-- Hero Section -->
 <div class="row">
   <div class="col-md-12">
@@ -35,7 +36,7 @@
 
     <!-- Property Info -->
     <div class="col-md-5">
-      <div class="property-info p-4 bg-white rounded shadow-sm border">
+      <div class="property-info p-4 bg-white rounded shadow-sm border" [attr.dir]="getCardDirection(property)">
         <h2 class="text-3xl font-bold title">{{ property.title }}</h2>
         <p class="text-muted address">
           <i class="bi bi-geo-alt-fill text-muted"></i> {{ property.city }},
@@ -145,4 +146,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>

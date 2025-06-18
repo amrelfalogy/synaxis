@@ -1,0 +1,66 @@
+<section class="properties-list-section">
+  <div class="container">
+    <!-- Loading Spinner -->
+    <div *ngIf="isLoading" class="loading-container">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- No Jobs Message -->
+    <div *ngIf="noJobs && !isLoading" class="no-properties">
+      <p class="no-properties-message">
+        {{ "home.jobs_list.no_jobs" | translate }}
+      </p>
+      <p class="highlight-message">
+        {{ "home.jobs_list.first_ad_offer" | translate }}
+      </p>
+    </div>
+
+    <!-- Jobs Grid -->
+    <div class="row properties-grid" *ngIf="!isLoading && !noJobs">
+      <h2 class="section-title">
+        {{ "home.jobs_list.title" | translate }}
+      </h2>
+      <div
+  *ngFor="let job of displayedJobs"
+  class="col-lg-4 col-md-6 col-sm-12 property-card"
+>
+  <div class="card job-card mb-4 shadow-sm" [attr.dir]="getCardDirection(job)">
+    <div class="card-body">
+      <div class="d-flex align-items-center mb-2">
+        <span class="badge badge-primary mr-2">{{ job.jobType }} </span>
+        <span class="badge badge-secondary">{{ job.industry }}</span>
+      </div>
+      <h5 class="card-title mb-1">{{ job.title }}</h5>
+      <p class="mb-2 text-muted" style="font-size: 0.85rem;">
+        <i class="fas fa-map-marker-alt" style="text-transform: capitalize;"></i> {{ job.city }}
+        &nbsp;|&nbsp;
+         {{ job.salary | currency : "EGP" }}
+      </p>
+      <p class="mb-2 text-muted" style="font-size: 0.85rem;">
+        <i class="fas fa-briefcase"></i>
+        {{ "Years Exp:" | translate }} {{ job.yearsOfExperience }}
+      </p>
+      <p class="card-text" style="min-height: 30px;">
+       Description: {{ job.description | slice:0:200 }}{{ job.description.length > 200 ? '...' : '' }}
+      </p>
+      <div class="d-flex justify-content-between align-items-center mt-3">
+        <span class="text-muted" style="font-size: 0.9rem;">
+          <i class="fas fa-phone"></i> {{ job.phone }}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+
+    <!-- "See More" Button -->
+    <div
+      class="see-more-container"
+      *ngIf="!isLoading && displayedJobs.length < jobs.length"
+    >
+      <button (click)="showMore()" class="see-more-btn">
+        {{ "home.jobs_list.see_more" | translate }}
+      </button>
+    </div>
+  </div>
+</section>

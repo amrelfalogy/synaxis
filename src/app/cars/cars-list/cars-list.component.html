@@ -1,0 +1,64 @@
+<section class="properties-list-section">
+  <div class="container">
+    <!-- Loading Spinner -->
+    <div *ngIf="isLoading" class="loading-container">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- No Cars Message -->
+    <div *ngIf="noCars && !isLoading" class="no-properties">
+      <p class="no-properties-message">
+        {{ "home.cars_list.no_cars" | translate }}
+      </p>
+      <p class="highlight-message">
+        {{ "home.cars_list.first_ad_offer" | translate }}
+      </p>
+    </div>
+
+    <!-- Cars Grid -->
+    <div class="row properties-grid" *ngIf="!isLoading && !noCars">
+      <h2 class="section-title">
+        {{ "home.cars_list.title" | translate }}
+      </h2>
+      <div
+        *ngFor="let car of displayedCars"
+        class="col-lg-4 col-md-6 col-sm-12 property-card"
+      >
+        <div class="card">
+          <img
+            [src]="car.images[0]"
+            (error)="car.images[0] = 'assets/imgs/6-0.png'"
+            class="card-img-top"
+            alt="Car Image"
+            [routerLink]="['/cars/details', car._id]"
+            loading="lazy"
+          />
+          <div class="card-body">
+            <h5 class="card-title">
+              {{ car.title }}
+              <span [ngClass]="{ rtl: isArabic }" class="property-type">
+                {{ car.model }} • {{ car.year }}
+              </span>
+            </h5>
+            <p class="card-text">
+              {{ car.city }} • {{ car.mileage }} km
+            </p>
+            <p class="price">
+              {{ car.price | currency : "EGP" }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- "See More" Button -->
+    <div
+      class="see-more-container"
+      *ngIf="!isLoading && displayedCars.length < cars.length"
+    >
+      <button (click)="showMore()" class="see-more-btn">
+        {{ "home.cars_list.see_more" | translate }}
+      </button>
+    </div>
+  </div>
+</section>

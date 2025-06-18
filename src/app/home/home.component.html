@@ -1,4 +1,8 @@
 <div class="header">
+  <picture>
+      <source srcset="assets/imgs/601-comp.webp" type="image/webp" />
+      <img src="assets/imgs/skyscraper.jpg" alt="header background" class="header-bg" />
+    </picture>
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
@@ -35,7 +39,7 @@
   </div>
 </div>
 
-<section class="message section">
+<section class="section message">
   <div class="row">
     <div class="col-md-12">
       <div class="content container">
@@ -61,55 +65,34 @@
         </div>
       </div>
     </div>
-    <div class="row cards-container">
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="card">
-          <img src="assets/imgs/ser1.jpeg" alt="serviceImg" />
-          <div class="overlay"></div>
-          <div class="card-content">
-            <h2>{{ "home.services_section.real_estate.title" | translate }}</h2>
-            <p>
-              {{ "home.services_section.real_estate.description" | translate }}
-            </p>
-          </div>
+    <div class="services-grid">
+        <div
+          class="service-card">
+          <img src="assets/imgs/ser1.jpeg" alt="serviceImg" class="service-img"  />
+          <h4 class="service-name">{{ "home.services_section.real_estate.title" | translate }}</h4>
+          <p>
+                {{ "home.services_section.real_estate.description" | translate }}
+          </p>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="card">
-          <img src="assets/imgs/s4.jpg" alt="serviceImg" />
-          <div class="overlay"></div>
-          <div class="card-content">
-            <h2>
-              {{ "home.services_section.constructions.title" | translate }}
-            </h2>
-            <p>
+        <div
+          class="service-card">
+          <img src="assets/imgs/s4.webp" alt="serviceImg" class="service-img"  />
+          <h4 class="service-name">{{ "home.services_section.constructions.title" | translate }}</h4>
+          <p>
               {{
                 "home.services_section.constructions.description" | translate
               }}
-            </p>
-          </div>
+          </p>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="card">
-          <img src="assets/imgs/ser3.jpeg" alt="serviceImg" />
-          <div class="overlay"></div>
-          <div class="card-content">
-            <h2>{{ "home.services_section.events.title" | translate }}</h2>
-            <p>{{ "home.services_section.events.description" | translate }}</p>
-          </div>
+        <div
+          class="service-card">
+          <img src="assets/imgs/ser3.jpeg" alt="serviceImg" class="service-img" />
+          <h4 class="service-name">{{ "home.services_section.events.title" | translate }}</h4>
+          <p>
+              {{ "home.services_section.events.description" | translate }}
+          </p>
         </div>
-      </div>
-    </div>
-    <!-- <div class="row">
-      <div class="col" style="display: flex; justify-content: center">
-        <div class="btn">
-          <button class="mybtn" routerLink="/coming-soon">
-            {{ "home.services_section.view_all_services" | translate }}
-          </button>
-        </div>
-      </div>
-    </div> -->
+    </div>    
   </div>
 </div>
 
@@ -127,7 +110,7 @@
         </button>
       </div>
       <div class="sell-property-video col-md-6 col-12">
-        <video autoplay muted loop playsinline>
+        <video autoplay muted loop playsinline preload="auto">
           <source src="assets/videos/property-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -136,4 +119,22 @@
   </div>
 </section>
 
-<app-properties-list></app-properties-list>
+<section class="lists-section">
+  <!-- Unified "no data" message -->
+  <div *ngIf="allEmpty" class="no-data-section text-center ">
+  <h3>{{ "home.no_adds.title" | translate }}</h3>
+  <p>{{ "home.no_adds.description" | translate }}</p>
+  <button class="sell-btn" routerLink="/properties/add">
+          {{ "home.sell_property.add_property" | translate }}
+        </button>
+
+</div>
+
+<!-- Only show lists if not all empty -->
+<ng-container *ngIf="!allEmpty" class="lists-container">
+  <app-properties-list (empty)="noProperties = $event"></app-properties-list>
+  <app-cars-list (empty)="noCars = $event"></app-cars-list>
+  <app-jobs-list (empty)="noJobs = $event"></app-jobs-list>
+</ng-container>
+
+</section>

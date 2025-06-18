@@ -9,6 +9,8 @@ import { Router, Event, NavigationEnd } from '@angular/router';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+  isLoading = true;
+  
   title = 'Synaxis';
 
   constructor(
@@ -18,6 +20,11 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.isLoading = false;
+    },
+      2000
+    );
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
         if (!event.url.includes('#')) {

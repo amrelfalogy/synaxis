@@ -31,6 +31,7 @@
             class="card-img-top"
             alt="Property Image"
             [routerLink]="['/properties/details', property._id]"
+            loading="lazy"
           />
           <div class="card-body">
             <h5 class="card-title">
@@ -38,9 +39,9 @@
               <span [ngClass]="{ rtl: isArabic }" class="property-type">
                 {{
                   property.type === "buy"
-                    ? ("home.properties_list.property_card.type_for_sale"
+                    ? ("add_property.FORM.TYPE_OPTIONS.BUY"
                       | translate)
-                    : ("home.properties_list.property_card.type_for_rent"
+                    : ("add_property.FORM.TYPE_OPTIONS.RENT"
                       | translate)
                 }}
               </span>

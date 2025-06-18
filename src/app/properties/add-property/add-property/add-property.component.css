@@ -44,6 +44,34 @@
   color: #f3bc15;
 }
 
+.ad-type-icon {
+  font-size: 4.5rem;
+  margin-bottom: 10px;
+  color: #142534;
+}
+.ad-type-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #142534;
+  margin-top: 8px;
+}
+.type-card{
+  cursor: pointer;
+  margin: 10px auto;
+}
+.ad-type-card:hover {
+  background: #142534;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+
+  .ad-type-icon {
+    color: #FFF;
+  }
+  .ad-type-title {
+    color: #FFF;
+  }
+
+}
 /* General Styling */
 .property-page {
   background: #f9f9f9;
@@ -113,7 +141,7 @@ select:focus {
 }
 
 .btn-primary {
-  background: #007bff;
+  background: #001f3f;
   color: #fff;
 }
 
@@ -130,6 +158,33 @@ select:focus {
 }
 .form-check-input {
   width: 2px;
-
+  margin-top: 5px;
+  border: 1px solid #898989;
   padding: 8px;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-start; /* default for LTR */
+}
+
+
+/* For RTL: reverse the order and align to flex-end */
+:host-context([dir="rtl"]) .form-check {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+/* SNACKBAR STYLE */
+.snackbar-success {
+  background-color: #4caf50; /* Green */
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.snackbar-error {
+  background-color: #f44336; /* Red */
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }

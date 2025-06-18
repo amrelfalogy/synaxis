@@ -1,0 +1,185 @@
+.car-details{
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.header {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.header .header-content {
+  display: grid;
+  text-align: center;
+  z-index: 2;
+}
+
+.header-content h1 {
+  font-weight: 700;
+  color: white;
+  font-size: 50px;
+  margin-bottom: 11px;
+  text-transform: uppercase;
+}
+
+.header-content h3 {
+  font-size: 16px;
+  color: #bbb;
+  font-weight: 400;
+}
+.header-content h3 span {
+  color: #f3bc15;
+}
+
+/* content */
+.car-details {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-image {
+  min-height: 100%;
+}
+
+.main-image img {
+  max-height: 100%;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  position: absolute;
+  min-height: 100%;
+}
+.car-info {
+  border: 1px solid #e0e0e0;
+  
+}
+.car-info h2 {
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.address {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+.overview {
+  justify-content: start;
+  gap: 75px;
+  margin: 20px auto;
+}
+.overview span {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.description-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.price {
+  font-weight: 500;
+  margin: 30px auto 15px;
+  color: #cd2323;
+  font-size: 2rem;
+}
+.text-muted {
+  color: rgb(45 48 52 / 89%);
+}
+
+.gallery-item {
+  height: 200px;
+}
+
+.gallery-item img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.gallery-item img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.gallary-col {
+  padding: 2px !important;
+}
+.gallery-item .img-fluid {
+  height: 100% !important;
+  min-width: 100% !important;
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  border-radius: 5px;
+  gap: 15px;
+}
+
+.shareButton {
+  border: none;
+  border-radius: 50%;
+  /* background: #24b54c; */
+  padding: 14px 17px;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  display: inline-flex;
+  color: white;
+}
+
+.shareButton:hover {
+  transform: scale(1.1);
+}
+
+.shareButton svg {
+  width: 27px;
+  height: 27px;
+}
+.shareButton.whatsapp {
+  background-color: #24b54c;
+  color: #fff;
+}
+.shareButton.copy-link {
+  background-color: rgb(12, 12, 12);
+  color: #fff;
+}
+
+.shareButton.main {
+  position: relative;
+  background-color: #fff;
+  color: rgb(12, 12, 12);
+}
+
+.shareButton.main.open .share {
+  display: none;
+}
+
+.shareButton.main.open .close {
+  display: block;
+}
+.share-options {
+  display: flex;
+  gap: 15px;
+}
+.fa-solid{
+  font-size: smaller;
+}

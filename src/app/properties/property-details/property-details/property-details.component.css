@@ -1,3 +1,7 @@
+.property-details {
+  overflow-x: hidden;
+}
+
 /* Hero Section */
 .header {
   position: relative;
@@ -48,16 +52,22 @@
 .property-details {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.main-image {
+  min-height: 100%;
+}
 .main-image img {
   max-height: 500px;
   object-fit: cover;
   width: 100%;
   border-radius: 8px;
   cursor: pointer;
+   position: absolute;
+  min-height: 100%;
 }
 .property-info {
   border: 1px solid #e0e0e0;
-  height: 500px;
+ 
 }
 .property-info h2 {
   text-transform: uppercase;
