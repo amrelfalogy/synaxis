@@ -13,7 +13,7 @@ export class NewsService {
 
   // Fetch Egypt News
   getEgyptNews(page: number = 1, limit: number = 10): Observable<any> {
-    const url = `http://localhost:3000/rss/youm7`; // Replace with your Node.js server URL
+    const url = `https://amrproject.codepeak.software/rss/youm7`;
     const params = new HttpParams()
       .set('page', page.toString())
       .set('limit', limit.toString());
