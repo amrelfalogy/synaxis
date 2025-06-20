@@ -269,11 +269,14 @@
       <div class="col-sm-3">
         <h3 class="footer-title">{{ "layout.footer.policies" | translate }}</h3>
         <ul class="footer-links">
-          <li>
-            {{ "layout.footer.privacy_policy" | translate }}
+          <li  style="cursor: pointer;">
+            <a routerLink="privacy-policy">
+              {{ "layout.footer.privacy_policy" | translate }}
+            </a>
           </li>
-          <li>
-            {{ "layout.footer.terms_conditions" | translate }}
+          <li style="cursor: pointer;">
+            <a routerLink="terms-conditions"> {{ "layout.footer.terms_conditions" | translate }}</a>
+           
           </li>
           <li>
             {{ "layout.footer.return_policy" | translate }}
