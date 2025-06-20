@@ -6,44 +6,38 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class NewsService {
-  private apiKey = '6d5498439a904f5ab73281ffcb88db50';
-  private baseUrl = 'https://newsapi.org/v2';
+  private backendBaseUrl = 'https://amrproject.codepeak.software';
 
   constructor(private http: HttpClient) {}
 
-  // Fetch Egypt News
+  // Egypt News (مثال قديم شغال)
   getEgyptNews(page: number = 1, limit: number = 10): Observable<any> {
-    const url = `https://amrproject.codepeak.software/rss/youm7`;
+    const url = `${this.backendBaseUrl}/rss/youm7`;
     const params = new HttpParams()
       .set('page', page.toString())
       .set('limit', limit.toString());
     return this.http.get(url, { params });
   }
 
-  // Fetch top headlines in the 'business' category
+  // Business News
   getBusinessNews(): Observable<any> {
-    const url = `${this.baseUrl}/top-headlines?category=business&apiKey=${this.apiKey}`;
-    return this.http.get(url);
+    return this.http.get(`${this.backendBaseUrl}/BusinessNews`);
   }
 
-  // Fetches top headlines specifically from BBC
+  // BBC News
   getBBCHeadlines(): Observable<any> {
-    return this.http.get(
-      `${this.baseUrl}/everything?sources=bbc-news&apiKey=${this.apiKey}`
-    );
+    return this.http.get(`${this.backendBaseUrl}/bbc`);
   }
 
-  // Feaches Top Headlines Endpoint
+  // Top Headlines (country = 'us' is default)
   getTopHeadlines(country: string = 'us'): Observable<any> {
-    return this.http.get(
-      `${this.baseUrl}/top-headlines?country=${country}&apiKey=${this.apiKey}`
-    );
+    const params = new HttpParams().set('country', country);
+    return this.http.get(`${this.backendBaseUrl}/TopHeadlines`, { params });
   }
 
-  // Searches for news articles based on a query Endpoint
+  // Search News
   searchNews(query: string): Observable<any> {
-    return this.http.get(
-      `${this.baseUrl}/everything?q=${query}&apiKey=${this.apiKey}`
-    );
+    const params = new HttpParams().set('q', query);
+    return this.http.get(`${this.backendBaseUrl}/search`, { params });
   }
 }

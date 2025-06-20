@@ -337,6 +337,122 @@
       "SUBMIT_BUTTON": "Submit Job Ad",
       "PREVIEW_TITLE": "Preview"
     }
-  }
+  },
+  "privacy_policy": {
+  "title": "Privacy Policy & Data Protection",
+  "sections": [
+    {
+      "heading": "Data Collection",
+      "items": [
+        "We collect user data during registration or while using our services. This includes: full name, email address, phone number, geographic location, device type, and advertisement content."
+      ]
+    },
+    {
+      "heading": "Use of Data",
+      "items": [
+        "The collected data is used to enhance user experience, provide support, and analyze performance.",
+        "Data is not shared with any third party without explicit consent unless required by law."
+      ]
+    },
+    {
+      "heading": "Protection of Company and Developer Data",
+      "items": [
+        "Project, property, and pricing data submitted by companies and developers is treated with strict confidentiality.",
+        "Such data may not be used for marketing purposes outside the platform without official authorization."
+      ]
+    },
+    {
+      "heading": "User-Submitted Content",
+      "items": [
+        "Users are solely responsible for the accuracy and validity of the data and images they upload.",
+        "The company reserves the right to remove any content that violates policies or regulations."
+      ]
+    },
+    {
+      "heading": "Cookies",
+      "items": [
+        "The website uses cookies to improve performance and personalize content.",
+        "Users may disable cookies through their browser settings."
+      ]
+    },
+    {
+      "heading": "Data Security",
+      "items": [
+        "We implement advanced encryption technologies and firewalls to protect user data.",
+        "All data is stored in secure environments that comply with international standards."
+      ]
+    },
+    {
+      "heading": "User Rights",
+      "items": [
+        "Users have the right to request modification or deletion of their personal data at any time through official communication channels."
+      ]
+    },
+    {
+      "heading": "Policy Acceptance",
+      "items": [
+        "Users are required to accept the Privacy Policy during registration. No account can be created without this acceptance.",
+        "The company reserves the right to amend the Privacy Policy at any time. Continued use of the website constitutes implied acceptance of any updates."
+      ]
+    }
+  ]
+},
+"terms_conditions": {
+  "title": "Terms and Conditions",
+  "sections": [
+    {
+      "heading": "Acceptance of Terms",
+      "items": [
+        "By using the \"Synaxis Real Estate Investment & Development\" website or registering an account you explicitly agree to comply with these Terms and Conditions.",
+        "Creating an account or accessing any of the website’s services is not permitted without prior acceptance of these Terms and the Privacy Policy."
+      ]
+    },
+    {
+      "heading": "Account Registration and Usage",
+      "items": [
+        "Users must provide accurate and up-to-date information during registration.",
+        "Each user is solely responsible for maintaining the confidentiality of their account credentials.",
+        "The company reserves the right to suspend or delete any account that violates these terms without prior notice."
+      ]
+    },
+    {
+      "heading": "Real Estate and Commercial Advertisements",
+      "items": [
+        "Each newly registered account is entitled to publish five (5) free advertisements, including real estate promotional and commercial ads.",
+        "A maximum of five (5) clear images is allowed per listing.",
+        "All information provided must be accurate and not misleading. It is strictly prohibited to post content that violates legal or moral standards."
+      ]
+    },
+    {
+      "heading": "Brokers and Developers",
+      "items": [
+        "Official documentation proving commercial identity is required before posting any advertisements.",
+        "The identity of the advertiser (company or individual) must be clearly disclosed in every listing."
+      ]
+    },
+    {
+      "heading": "Promotional Offers and Contracts",
+      "items": [
+        "The company provides discounts of up to 70% on promotional and commercial advertisements.",
+        "Long-term advertising contracts are granted free of charge in exchange for active participation in supporting the platform’s reputation."
+      ]
+    },
+    {
+      "heading": "Intellectual Property",
+      "items": [
+        "All content on the platform (texts-images-designs) is owned or licensed by Synaxis.",
+        "It is prohibited to reproduce or reuse any materials without prior written consent."
+      ]
+    },
+    {
+      "heading": "Amendments to Terms",
+      "items": [
+        "The company reserves the right to modify these Terms and related policies at any time without consulting the client in line with the interests of the company clients and applicable security and financial regulations.",
+        "Continued use of the website following any changes shall constitute implied acceptance of the amended Terms."
+      ]
+    }
+  ]
+}
+
 
 }

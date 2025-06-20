@@ -14,6 +14,7 @@ export class LayoutComponent implements OnInit {
   isHomePage: boolean = false;
   isAtTop: boolean = true;
   isAtNewsPage: boolean = false;
+  isAtPoliciesPage: boolean = false;
   isNavbarVisible = true;
   isNavbarCollapsed = false;
   lastScrollTop = 0;
@@ -40,6 +41,7 @@ export class LayoutComponent implements OnInit {
       const url = this.router.url;
 
       this.isHomePage = url === '/home' || url === '/';
+      this.isAtPoliciesPage = url === '/privacy-policy' || url === '/terms-conditions';
       this.isAtNewsPage = url.includes('/news'); 
     }
     });

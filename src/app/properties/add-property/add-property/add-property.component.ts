@@ -149,6 +149,8 @@ this.jobForm = this.fb.group({
         (response) => {
          this.snackBar.open('Property added successfully!', 'Close', { duration: 3000, panelClass: 'snackbar-success' });
           this.isLoading = false;
+           this.propertyForm.reset(); // Reset the form
+        this.selectedFiles = []; // Clear selected files
         },
         (error) => {
           const errorMessage =

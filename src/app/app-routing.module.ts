@@ -10,6 +10,8 @@ import { SwEngineerComponent } from './profiles/sw-engineer/sw-engineer.componen
 import { AddPropertyComponent } from './properties/add-property/add-property/add-property.component';
 import { PropertyDetailsComponent } from './properties/property-details/property-details/property-details.component';
 import { CarDetailsComponent } from './cars/car-details/car-details/car-details.component';
+import { PrivacyPolicyComponent } from './policies/privacy-policy/privacy-policy.component';
+import { TermsConditionsComponent } from './policies/terms-conditions/terms-conditions.component';
 
 const routes: Routes = [
    { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -54,7 +56,9 @@ const routes: Routes = [
     .then(m => m.JobsListModule)
   },
 
- 
+
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  { path: 'terms-conditions', component: TermsConditionsComponent },
 
   { path: 'coming-soon', component: ComingSoonComponent },
   {

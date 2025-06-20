@@ -4,7 +4,7 @@
     [ngClass]="{
       'navbar-light': !isAtTop,
       'navbar-hidden': !isNavbarVisible,
-      'navbar-transparent': isAtTop && !isNavbarCollapsed && !isAtNewsPage,
+      'navbar-transparent': isAtTop && !isNavbarCollapsed && !isAtNewsPage && !isAtPoliciesPage,
       'navbar-collapsed-bg': isNavbarCollapsed
     }"
   >
@@ -59,25 +59,21 @@
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
-              (click)="collapseNavbar()"
+              
             >
               {{ "layout.nav.services" | translate }}
             </a>
             <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
               <li>
                 <a
-                  class="dropdown-item"
-                  routerLink="coming-soon"
-                  (click)="setActiveLink('coming-soon')"
+                  class="dropdown-item"                  
                   (click)="collapseNavbar()"
                   >{{ "layout.nav.services_list.real_estate" | translate }}</a
                 >
               </li>
               <li>
                 <a
-                  class="dropdown-item"
-                  routerLink="coming-soon"
-                  (click)="setActiveLink('coming-soon')"
+                  class="dropdown-item"                  
                   (click)="collapseNavbar()"
                   >{{ "layout.nav.services_list.exhibitions" | translate }}
                 </a>
@@ -85,8 +81,7 @@
               <li>
                 <a
                   class="dropdown-item"
-                  routerLink="coming-soon"
-                  (click)="setActiveLink('coming-soon')"
+                 
                   (click)="collapseNavbar()"
                   >{{ "layout.nav.services_list.events" | translate }}</a
                 >
@@ -94,8 +89,7 @@
               <li>
                 <a
                   class="dropdown-item"
-                  routerLink="coming-soon"
-                  (click)="setActiveLink('coming-soon')"
+                  
                   (click)="collapseNavbar()"
                   >{{ "layout.nav.services_list.constructions" | translate }}</a
                 >
@@ -116,7 +110,6 @@
               <li>
                 <a
                   class="dropdown-item"
-                  routerLink="coming-soon"
                   (click)="collapseNavbar()"
                   >{{
                     "layout.nav.projects_list.city_entertainment" | translate
@@ -125,9 +118,7 @@
               </li>
               <li>
                 <a
-                  class="dropdown-item"
-                  routerLink="coming-soon"
-                  (click)="setActiveLink('coming-soon')"
+                  class="dropdown-item"                  
                   (click)="collapseNavbar()"
                   >{{ "layout.nav.projects_list.events" | translate }}</a
                 >
@@ -135,8 +126,7 @@
               <li>
                 <a
                   class="dropdown-item"
-                  routerLink="coming-soon"
-                  (click)="setActiveLink('coming-soon')"
+                  
                   (click)="collapseNavbar()"
                   >{{ "layout.nav.projects_list.durable_goods" | translate }}</a
                 >
@@ -169,7 +159,8 @@
           style="justify-content: end"
         >
           <!-- Language Selector Dropdown -->
-          <div class="dropdown" style="display: inline-block">
+          <div class="dropdown" style="display: inline-block"
+          [ngStyle]="currentLang === 'ar' ? {'margin-right.px': 42} : {}">
             <button
               style="padding: 0"
               class="btn btn-secondary dropdown-toggle"
@@ -221,7 +212,7 @@
           </div>
           <div class="contact-item">
             <span class="material-symbols-outlined">call</span>
-            <a href="tel:+201094969418" style="font-size: 16px">{{
+            <a href="tel:+201094969418" dir="ltr" style="font-size: 16px; unicode-bidi: plaintext;">{{
               "layout.footer.phone" | translate
             }}</a>
           </div>
@@ -231,7 +222,7 @@
             href="https://wa.me/201090160332"
           >
             <fa-icon [icon]="faWhatsapp" class="whatsapp-icon"></fa-icon>
-            <a href="https://wa.me/201090160332">{{
+            <a href="https://wa.me/201090160332" dir="ltr" style="unicode-bidi: plaintext;">{{
               "layout.footer.whatsapp" | translate
             }}</a>
           </a>

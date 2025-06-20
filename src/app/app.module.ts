@@ -25,6 +25,8 @@ import { AddPropertyComponent } from './properties/add-property/add-property/add
 import { PropertyDetailsComponent } from './properties/property-details/property-details/property-details.component';
 import { AddAdComponent } from './add-ad/add-ad.component';
 import { CarDetailsComponent } from './cars/car-details/car-details/car-details.component';
+import { PrivacyPolicyComponent } from './policies/privacy-policy/privacy-policy.component';
+import { TermsConditionsComponent } from './policies/terms-conditions/terms-conditions.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -45,6 +47,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     DropdownDirective,
     AddAdComponent,
     CarDetailsComponent,
+    PrivacyPolicyComponent,
+    TermsConditionsComponent,
   ],
   imports: [
     BrowserModule,

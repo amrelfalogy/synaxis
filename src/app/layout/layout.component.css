@@ -63,6 +63,7 @@
 .dropdown-item {
   color: #dedede;
   text-transform: capitalize;
+  cursor: default;
 }
 
 .dropdown-item:hover {
